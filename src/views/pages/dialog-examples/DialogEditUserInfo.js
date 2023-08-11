@@ -6,11 +6,10 @@ import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
-import Switch from '@mui/material/Switch'
+// import Switch from '@mui/material/Switch'
 import Dialog from '@mui/material/Dialog'
 import Button from '@mui/material/Button'
 import { styled } from '@mui/material/styles'
-import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import Fade from '@mui/material/Fade'
@@ -44,30 +43,10 @@ const CustomCloseButton = styled(IconButton)(({ theme }) => ({
   }
 }))
 
-const DialogEditUserInfo = () => {
-  // ** States
-  const [show, setShow] = useState(false)
-  const [languages, setLanguages] = useState([])
-
-  const handleChange = event => {
-    const {
-      target: { value }
-    } = event
-    setLanguages(typeof value === 'string' ? value.split(',') : value)
-  }
+const DialogEditUserInfo = ({show,setShow}) => {
 
   return (
     <Card>
-      <CardContent sx={{ textAlign: 'center', '& svg': { mb: 2 } }}>
-        <Icon icon='tabler:user' fontSize='2rem' />
-        <Typography variant='h6' sx={{ mb: 4 }}>
-          Edit User Info
-        </Typography>
-        <Typography sx={{ mb: 3 }}>Use this modal to modify the existing user&prime;s current information.</Typography>
-        <Button variant='contained' onClick={() => setShow(true)}>
-          Show
-        </Button>
-      </CardContent>
       <Dialog
         fullWidth
         open={show}
@@ -90,22 +69,11 @@ const DialogEditUserInfo = () => {
           </CustomCloseButton>
           <Box sx={{ mb: 8, textAlign: 'center' }}>
             <Typography variant='h3' sx={{ mb: 3 }}>
-              Edit User Information
-            </Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
-              Updating user details will receive a privacy audit.
+              Login Information
             </Typography>
           </Box>
           <Grid container spacing={6}>
-            <Grid item sm={6} xs={12}>
-              <CustomTextField fullWidth defaultValue='Oliver' label='First Name' placeholder='John' />
-            </Grid>
-            <Grid item sm={6} xs={12}>
-              <CustomTextField fullWidth defaultValue='Queen' label='Last Name' placeholder='Doe' />
-            </Grid>
-            <Grid item xs={12}>
-              <CustomTextField fullWidth defaultValue='oliverQueen' label='Username' placeholder='johnDoe' />
-            </Grid>
+            
             <Grid item sm={6} xs={12}>
               <CustomTextField
                 fullWidth
@@ -115,68 +83,22 @@ const DialogEditUserInfo = () => {
               />
             </Grid>
             <Grid item sm={6} xs={12}>
-              <CustomTextField select defaultValue='Status' fullWidth id='status-select' label='Status'>
-                <MenuItem value='Status'>Status</MenuItem>
-                <MenuItem value='Active'>Active</MenuItem>
-                <MenuItem value='Inactive'>Inactive</MenuItem>
-                <MenuItem value='Suspended'>Suspended</MenuItem>
-              </CustomTextField>
+              <CustomTextField fullWidth label='Password' placeholder='deadend1' defaultValue='deadend1' />
             </Grid>
             <Grid item sm={6} xs={12}>
-              <CustomTextField fullWidth label='Tax ID' placeholder='Tax-7490' defaultValue='Tax-8894' />
-            </Grid>
-            <Grid item sm={6} xs={12}>
-              <CustomTextField fullWidth label='Contact' placeholder='+ 123 456 7890' defaultValue='+1 609 933 4422' />
+              <CustomTextField fullWidth label='Server/Site URL:' placeholder='elitesingles.com' defaultValue='elitesingles.com' />
             </Grid>
             <Grid item sm={6} xs={12}>
               <CustomTextField
-                select
                 fullWidth
-                label='Language'
-                SelectProps={{
-                  multiple: true,
-                  value: languages,
-                  onChange: e => handleChange(e),
-                  renderValue: selected => (
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                      {selected.map(value => (
-                        <Chip key={value} label={value} />
-                      ))}
-                    </Box>
-                  )
-                }}
+                label='Port:'
+                placeholder=''
+                id='Port'
+                defaultValue=''
               >
-                <MenuItem value='English'>English</MenuItem>
-                <MenuItem value='Spanish'>Spanish</MenuItem>
-                <MenuItem value='French'>French</MenuItem>
-                <MenuItem value='German'>German</MenuItem>
-                <MenuItem value='Hindi'>Hindi</MenuItem>
               </CustomTextField>
             </Grid>
-            <Grid item sm={6} xs={12}>
-              <CustomTextField
-                select
-                fullWidth
-                label='Country'
-                placeholder='UK'
-                id='country-select'
-                defaultValue='Select Country'
-              >
-                <MenuItem value='Select Country'>Select Country</MenuItem>
-                <MenuItem value='France'>France</MenuItem>
-                <MenuItem value='Russia'>Russia</MenuItem>
-                <MenuItem value='China'>China</MenuItem>
-                <MenuItem value='UK'>UK</MenuItem>
-                <MenuItem value='US'>US</MenuItem>
-              </CustomTextField>
-            </Grid>
-            <Grid item xs={12}>
-              <FormControlLabel
-                control={<Switch defaultChecked />}
-                label='Make this default shipping address'
-                sx={{ '& .MuiFormControlLabel-label': { color: 'text.secondary' } }}
-              />
-            </Grid>
+
           </Grid>
         </DialogContent>
         <DialogActions

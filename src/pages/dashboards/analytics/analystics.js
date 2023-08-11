@@ -6,9 +6,7 @@ import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
 import CardHeader from '@mui/material/CardHeader'
-import AvatarGroup from '@mui/material/AvatarGroup'
 import { DataGrid } from '@mui/x-data-grid'
-import LinearProgress from '@mui/material/LinearProgress'
 
 // ** Custom Component Import
 import CustomTextField from 'src/@core/components/mui/text-field'
@@ -17,12 +15,12 @@ import CustomTextField from 'src/@core/components/mui/text-field'
 import axios from 'axios'
 
 // ** Custom Components Imports
-import OptionsMenu from 'src/@core/components/option-menu'
 import CustomAvatar from 'src/@core/components/mui/avatar'
 
 // ** Utils Import
 import { getInitials } from 'src/@core/utils/get-initials'
-import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
+import { Button } from '@mui/material'
+import DialogEditUserInfo from 'src/views/pages/dialog-examples/DialogEditUserInfo'
 
 // ** renders name column
 const renderName = row => {
@@ -69,8 +67,9 @@ const columns = [
   {
     flex: 0.1,
     field: 'information',
-    minWidth: 120,
-    sortable: false,
+    minWidth: 400,
+    minHeight: 200,
+    sortable: true,
     headerName: 'Information',
     renderCell: ({ row }) => <Typography sx={{ color: 'text.secondary',textAlign: "end" }}>{row.information}</Typography>
   },
@@ -79,7 +78,10 @@ const columns = [
     minWidth: 150,
     field: 'login',
     headerName: 'Login',
-    renderCell: ({ row }) => <Typography sx={{ color: 'text.secondary' }}>{row.login}</Typography>
+    renderCell: ({ handleEditClickOpen }) => <Typography sx={{ color: 'text.secondary' }}><Button variant='contained' sx={{
+      px: '8',
+      mt: "4px"
+  }} onClick={handleEditClickOpen}>Login Info</Button></Typography>
   },
   {
     flex: 0.1,
@@ -95,7 +97,7 @@ const columns = [
     sortable: false,
     field: 'report',
     headerName: 'Report',
-    renderCell: ({ row }) => <Typography sx={{ color: 'text.secondary' }}>{row.report}</Typography>
+    renderCell: () => <Typography sx={{ color: 'text.secondary' }}><Button variant='contained'>Report</Button></Typography>
   },
   {
     flex: 0.1,
@@ -108,6 +110,15 @@ const columns = [
 ]
 
 const AnalyticsProject = () => {
+
+
+  const [openModal, setOpenModal] = useState(false); // State to control modal visibility
+
+  const handleEditClickOpen = () => {
+    console.log("modalOpen")
+    setOpenModal(true); // Open the modal
+  };
+  
   // ** State
   const [data, setData] = useState([])
   const [value, setValue] = useState('')
@@ -138,6 +149,7 @@ const AnalyticsProject = () => {
         autoHeight
         pagination
         rows={data}
+        handleEditClickOpen={handleEditClickOpen}
         rowHeight={62}
         columns={columns}
         // checkboxSelection
@@ -146,8 +158,10 @@ const AnalyticsProject = () => {
         paginationModel={paginationModel}
         onPaginationModelChange={setPaginationModel}
       />
+      <DialogEditUserInfo show={openModal} setShow={setOpenModal} />
     </Card>
   ) : null
+  
 }
 
 export default AnalyticsProject

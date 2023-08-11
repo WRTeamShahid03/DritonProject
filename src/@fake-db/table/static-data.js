@@ -7,6 +7,10 @@ export const rows = [
     email: 'kocrevy0@thetimes.co.uk',
     city: 'Krasnosilka',
     start_date: '09/23/2016',
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
     salary: 23896.35,
     age: '61',
     experience: '1 Year',
@@ -18,6 +22,10 @@ export const rows = [
     full_name: 'Eileen Diehn',
     post: 'Environmental Specialist',
     email: 'ediehn6@163.com',
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
     city: 'Lampuyang',
     start_date: '10/15/2017',
     salary: 18991.67,
@@ -31,6 +39,10 @@ export const rows = [
     full_name: 'De Falloon',
     post: 'Sales Representative',
     email: 'dfalloona@ifeng.com',
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
     city: 'Colima',
     start_date: '06/12/2018',
     salary: 19252.12,
@@ -43,6 +55,10 @@ export const rows = [
     avatar: '7.png',
     full_name: 'Stella Ganderton',
     post: 'Operator',
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
     email: 'sganderton2@tuttocitta.it',
     city: 'Golcowa',
     start_date: '03/24/2018',
@@ -57,6 +73,10 @@ export const rows = [
     full_name: 'Harmonia Nisius',
     post: 'Senior Cost Accountant',
     email: 'hnisius4@gnu.org',
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
     city: 'Lucan',
     start_date: '08/25/2017',
     salary: 10909.52,
@@ -72,6 +92,10 @@ export const rows = [
     email: 'ghoneywood5@narod.ru',
     city: 'Maofan',
     start_date: '06/01/2017',
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
     salary: 17803.8,
     age: '61',
     experience: '1 Year',
@@ -88,7 +112,12 @@ export const rows = [
     salary: 12336.17,
     age: '22',
     experience: '2 Years',
-    status: 2
+    status: 2,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 8,
@@ -101,7 +130,12 @@ export const rows = [
     salary: 19230.13,
     age: '55',
     experience: '5 Years',
-    status: 3
+    status: 3,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 9,
@@ -114,7 +148,12 @@ export const rows = [
     salary: 11677.32,
     age: '39',
     experience: '9 Years',
-    status: 5
+    status: 5,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 10,
@@ -127,7 +166,12 @@ export const rows = [
     salary: 15939.52,
     age: '23',
     experience: '3 Years',
-    status: 2
+    status: 2,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 12,
@@ -140,7 +184,12 @@ export const rows = [
     salary: 16745.47,
     age: '22',
     experience: '2 Years',
-    status: 4
+    status: 4,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 13,
@@ -153,7 +202,12 @@ export const rows = [
     salary: 15488.53,
     age: '36',
     experience: '6 Years',
-    status: 4
+    status: 4,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 14,
@@ -166,7 +220,12 @@ export const rows = [
     salary: 18442.34,
     age: '43',
     experience: '3 Years',
-    status: 2
+    status: 2,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 15,
@@ -179,7 +238,12 @@ export const rows = [
     salary: 13304.45,
     age: '19',
     experience: '9 Years',
-    status: 5
+    status: 5,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 16,
@@ -192,7 +256,12 @@ export const rows = [
     salary: 11953.08,
     age: '66',
     experience: '6 Years',
-    status: 5
+    status: 5,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 17,
@@ -205,7 +274,12 @@ export const rows = [
     salary: 20484.44,
     age: '64',
     experience: '4 Years',
-    status: 1
+    status: 1,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 18,
@@ -218,7 +292,12 @@ export const rows = [
     salary: 16871.48,
     age: '59',
     experience: '9 Years',
-    status: 1
+    status: 1,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 19,
@@ -231,7 +310,12 @@ export const rows = [
     salary: 19653.56,
     age: '41',
     experience: '1 Year',
-    status: 4
+    status: 4,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 20,
@@ -244,7 +328,12 @@ export const rows = [
     salary: 18303.87,
     age: '35',
     experience: '5 Years',
-    status: 1
+    status: 1,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 21,
@@ -257,7 +346,12 @@ export const rows = [
     salary: 15256.4,
     age: '30',
     experience: '0 Year',
-    status: 2
+    status: 2,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 22,
@@ -270,7 +364,12 @@ export const rows = [
     salary: 11209.16,
     age: '40',
     experience: '0 Year',
-    status: 3
+    status: 3,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 23,
@@ -283,7 +382,12 @@ export const rows = [
     salary: 13778.34,
     age: '21',
     experience: '1 Year',
-    status: 5
+    status: 5,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 24,
@@ -296,7 +400,12 @@ export const rows = [
     salary: 23081.71,
     age: '23',
     experience: '3 Years',
-    status: 1
+    status: 1,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 25,
@@ -309,7 +418,12 @@ export const rows = [
     salary: 13602.24,
     age: '47',
     experience: '7 Years',
-    status: 3
+    status: 3,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 26,
@@ -322,7 +436,12 @@ export const rows = [
     salary: 16969.63,
     age: '42',
     experience: '2 Years',
-    status: 4
+    status: 4,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 27,
@@ -335,7 +454,12 @@ export const rows = [
     salary: 23796.62,
     age: '28',
     experience: '8 Years',
-    status: 3
+    status: 3,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 28,
@@ -348,7 +472,12 @@ export const rows = [
     salary: 24027.81,
     age: '28',
     experience: '8 Years',
-    status: 4
+    status: 4,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 29,
@@ -361,7 +490,12 @@ export const rows = [
     salary: 13508.15,
     age: '48',
     experience: '8 Years',
-    status: 3
+    status: 3,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 30,
@@ -374,7 +508,12 @@ export const rows = [
     salary: 21632.3,
     age: '20',
     experience: '0 Year',
-    status: 2
+    status: 2,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 31,
@@ -387,7 +526,12 @@ export const rows = [
     salary: 24875.41,
     age: '37',
     experience: '7 Years',
-    status: 5
+    status: 5,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 32,
@@ -400,7 +544,12 @@ export const rows = [
     salary: 23888.98,
     age: '53',
     experience: '3 Years',
-    status: 2
+    status: 2,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 33,
@@ -413,7 +562,12 @@ export const rows = [
     salary: 14082.44,
     age: '27',
     experience: '7 Years',
-    status: 5
+    status: 5,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 34,
@@ -426,7 +580,12 @@ export const rows = [
     salary: 21386.52,
     age: '22',
     experience: '2 Years',
-    status: 3
+    status: 3,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 35,
@@ -439,7 +598,12 @@ export const rows = [
     salary: 13835.97,
     age: '46',
     experience: '6 Years',
-    status: 4
+    status: 4,
+    type:'Edate(UNPAID)',
+    information:"Gender = Man , AGE = 51 , City = Charleston , State = West Virginia Country = United States",
+    price:"6.00",
+    seller:"vantage",
+    
   },
   {
     id: 36,

@@ -6,11 +6,11 @@ const navigation = () => {
       badgeColor: 'error',
       children: [
       
-        {
-          icon: 'tabler:star',
-          title: 'Most Solded',
-          path: '/dashboards/most-solded'
-        },
+        // {
+        //   icon: 'tabler:star',
+        //   title: 'Most Solded',
+        //   path: '/dashboards/most-solded'
+        // },
         {
           icon: 'tabler:brand-shopee',
           title: 'Purchases',
@@ -20,6 +20,80 @@ const navigation = () => {
           icon: 'tabler:chart-pie-2',
           title: 'Analytics',
           path: '/dashboards/analytics'
+        },
+       
+      ]
+    },
+    {
+      title: 'Tools',
+      icon: 'tabler:shopping-cart',
+      badgeColor: 'error',
+      children: [
+      
+        {
+          icon: 'tabler:users',
+          title: 'Accounts',
+          path: '/tools/accounts'
+        },
+        {
+          icon: 'tabler:heart',
+          title: 'Dating',
+          path: '/tools/dating'
+        },
+        {
+          icon: 'tabler:brand-instagram',
+          title: 'Social Networks',
+          path: '/tools/social-network'
+        },
+        {
+          icon: 'tabler:brand-instagram',
+          title: 'VPN',
+          path: '/tools/vpn'
+        },
+        {
+          icon: 'tabler:brand-shopee',
+          title: 'Shopping',
+          path: '/tools/shopping'
+        },
+        {
+          icon: 'tabler:brand-shopee',
+          title: 'Shipping',
+          path: '/tools/shipping'
+        },
+        {
+          icon: 'tabler:video',
+          title: 'Streaming',
+          path: '/tools/straming'
+        },
+        {
+          icon: 'tabler:brand-beats',
+          title: 'Food',
+          path: '/tools/food'
+        },
+        {
+          icon: 'tabler:key',
+          title: 'Keys',
+          path: '/tools/keys'
+        },
+        {
+          icon: 'tabler:layout-dashboard',
+          title: 'Others',
+          path: '/tools/others'
+        },
+        {
+          icon: 'tabler:switch-vertical',
+          title: 'Stuffs',
+          path: '/tools/stuffs'
+        },
+        {
+          icon: 'tabler:chalkboard',
+          title: 'RDPS',
+          path: '/tools/rdps'
+        },
+        {
+          icon: 'tabler:brand-youtube',
+          title: 'Tutorials',
+          path: '/tools/tutorials'
         },
        
       ]
