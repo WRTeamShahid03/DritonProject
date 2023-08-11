@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300;500&display=swap');
+
+#purchaseGrid .content_head{
+    /* border-right: 1px solid #8c8e90; */
+    color: #636363;
+    font-weight: 500;
+    padding-right: 1rem;
+    font-family: Montserrat;
+    padding-bottom: 18px;
+    display: inline-block;
+    font-size: 26px;
+}
+
+#purchaseGrid .purchaseDiv{
+    background-color: white;
+    box-shadow: none;
+    padding-left: 24px;
+}
+
+#purchaseGrid .purchaseCard .verifyH3{
+    padding-bottom: 12px;
+    font-size: 2rem;
+}
+#purchaseGrid .purchaseCard .verify{
+    padding-left: 24px;
+}
+
+.purchaseCard .purchItems{
+    display: block;
+    margin-top: 50px;
+    font-weight: 100;
+}
+.purchaseCard .purchItems .zero{
+    padding: 4px 8px;
+    background-color: #82868b;
+    border-radius: 100%;
+    color: white;
+    margin-left: 4px;
+    box-shadow: 0 0 10px #82868b;
+}
+
+
+.css-1is5gi8-MuiPaper-root-MuiCard-root {
+    box-shadow: none;
+}
