@@ -1,9 +1,10 @@
 import React from 'react'
+import RDPs from './Rdps'
 
 const index = () => {
   return (
     <div>
-      index
+     <RDPs/>
     </div>
   )
 }

@@ -7,6 +7,8 @@ import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
 import CardHeader from '@mui/material/CardHeader'
 import { DataGrid } from '@mui/x-data-grid'
+import Alert from '@mui/material/Alert'
+
 
 // ** Custom Component Import
 import CustomTextField from 'src/@core/components/mui/text-field'
@@ -20,7 +22,8 @@ import CustomAvatar from 'src/@core/components/mui/avatar'
 // ** Utils Import
 import { getInitials } from 'src/@core/utils/get-initials'
 import { Button } from '@mui/material'
-import DialogEditUserInfo from 'src/views/pages/dialog-examples/DialogEditUserInfo'
+import LoginModal from './LoginModal'
+import MoreInfoModal from './MoreInfoModal'
 
 // ** renders name column
 const renderName = row => {
@@ -67,21 +70,20 @@ const columns = [
   {
     flex: 0.1,
     field: 'information',
-    minWidth: 400,
-    minHeight: 200,
+    minWidth: 340,
     sortable: true,
     headerName: 'Information',
-    renderCell: ({ row }) => <Typography sx={{ color: 'text.secondary',textAlign: "end" }}>{row.information}</Typography>
+    renderCell: ({ row }) => <Typography sx={{ color: 'text.secondary',textAlign: "center",
+    display: "flex",alignItems: "center", }} >  
+     {row.information.slice(0,28)+ " " + "..."}  <MoreInfoModal information={row.information}/>
+     </Typography>
   },
   {
     flex: 0.1,
     minWidth: 150,
     field: 'login',
     headerName: 'Login',
-    renderCell: ({ handleEditClickOpen }) => <Typography sx={{ color: 'text.secondary' }}><Button variant='contained' sx={{
-      px: '8',
-      mt: "4px"
-  }} onClick={handleEditClickOpen}>Login Info</Button></Typography>
+    renderCell: () => <Typography sx={{ color: 'text.secondary' }}> <LoginModal /> </Typography>
   },
   {
     flex: 0.1,
@@ -158,7 +160,7 @@ const AnalyticsProject = () => {
         paginationModel={paginationModel}
         onPaginationModelChange={setPaginationModel}
       />
-      <DialogEditUserInfo show={openModal} setShow={setOpenModal} />
+      
     </Card>
   ) : null
   

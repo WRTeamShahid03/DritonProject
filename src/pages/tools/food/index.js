@@ -1,8 +1,11 @@
 import React from 'react'
+import Food from './Food'
 
 const index = () => {
   return (
-    <div>index</div>
+    <div>
+      <Food/>
+    </div>
   )
 }
 

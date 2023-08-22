@@ -1,9 +1,10 @@
 import React from 'react'
+import VpnTable from './VpnTable'
 
 const index = () => {
   return (
     <div>
-      index
+     <VpnTable/>
     </div>
   )
 }

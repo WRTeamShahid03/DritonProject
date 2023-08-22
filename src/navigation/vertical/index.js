@@ -63,7 +63,7 @@ const navigation = () => {
         {
           icon: 'tabler:video',
           title: 'Streaming',
-          path: '/tools/straming'
+          path: '/tools/streaming'
         },
         {
           icon: 'tabler:brand-beats',
@@ -98,6 +98,96 @@ const navigation = () => {
        
       ]
     },
+    {
+      title: 'SMS Codes',
+      icon: 'tabler:message-2',
+      badgeColor: 'error',
+      children: [
+      
+        {
+          icon: 'tabler:world',
+          title: 'Services',
+          path: '/smscodes/services'
+        },
+      ]
+      },
+    {
+      title: 'Rent Number',
+      icon: 'tabler:message-2',
+      badgeColor: 'error',
+      children: [
+      
+        {
+          icon: 'tabler:world',
+          title: 'Rent SMS Numbers',
+          path: '/RentNumber/RentSMSNumber'
+        },
+        {
+          icon: 'tabler:message',
+          title: 'My Numbers',
+          path: '/RentNumber/MyNumber'
+        },
+      ]
+      },
+    {
+      title: 'RDPs Market',
+      icon: 'eva:monitor-outline',
+      badgeColor: 'error',
+      children: [
+      
+        {
+          icon: 'eva:monitor-outline',
+          title: 'Order a RDP',
+          path: '/RDPsMarket/OderRdp'
+        },
+        {
+          icon: 'eva:monitor-outline',
+          title: 'My RDPs',
+          path: '/RDPsMarket/MyRdps'
+        },
+      ]
+      },
+    {
+      title: 'Request Tools',
+      icon: 'octicon:git-pull-request-24',
+      badgeColor: 'error',
+      children: [
+      
+        {
+          icon: 'basil:add-outline',
+          title: 'Add Request',
+          path: '/RequestTools/addRequest'
+        },
+        {
+          icon: 'carbon:view',
+          title: 'View Requests',
+          path: '/RequestTools/viewRequest'
+        },
+      ]
+      },
+    {
+      title: 'Support',
+      icon: 'tabler:ball-football',
+      badgeColor: 'error',
+      children: [
+      
+        {
+          icon: 'jam:ticket',
+          title: 'Tickets',
+          path: '/Support/Tickets'
+        },
+        {
+          icon: 'ic:outline-report-problem',
+          title: 'Reports',
+          path: '/Support/Reports'
+        },
+        {
+          icon: 'tabler:user-x',
+          title: 'Warnings',
+          path: '/Support/Warnings'
+        },
+      ]
+      },
     {
       sectionTitle: 'Apps & Pages'
     },

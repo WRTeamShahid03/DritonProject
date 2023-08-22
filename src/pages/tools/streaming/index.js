@@ -1,9 +1,10 @@
 import React from 'react'
+import Streaming from './Streaming'
 
 const index = () => {
   return (
     <div>
-      index
+     <Streaming/>
     </div>
   )
 }

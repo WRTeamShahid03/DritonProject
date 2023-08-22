@@ -1,9 +1,10 @@
 import React from 'react'
+import Keys from './Keys'
 
 const index = () => {
   return (
     <div>
-      index
+    <Keys/>
     </div>
   )
 }

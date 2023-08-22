@@ -37,7 +37,6 @@ const index = () => {
             </Breadcrumbs> */}
 
       <Card className="">
-        <CardHeader title='Accounts' />
         {/* <CardContent>
 
         </CardContent> */}

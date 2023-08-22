@@ -45,3 +45,8 @@
 .css-1is5gi8-MuiPaper-root-MuiCard-root {
     box-shadow: none;
 }
+
+
+.css-1z5v9h-MuiTypography-root-MuiBreadcrumbs-root a {
+    color: #636363 !important;
+}

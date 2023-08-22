@@ -1,9 +1,10 @@
 import React from 'react'
+import Shopping from './Shopping'
 
 const index = () => {
   return (
     <div>
-      index
+      <Shopping/>
     </div>
   )
 }

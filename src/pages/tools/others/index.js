@@ -1,9 +1,10 @@
 import React from 'react'
+import Others from './Others'
 
 const index = () => {
   return (
     <div>
-      index
+      <Others/>
     </div>
   )
 }

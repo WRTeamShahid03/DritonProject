@@ -1,9 +1,10 @@
 import React from 'react'
+import DatingTable from './DatingTable'
 
 const index = () => {
   return (
     <div>
-      index
+     <DatingTable/>
     </div>
   )
 }

@@ -51,5 +51,40 @@ code[class*='language-'] {
   color: #5e5873;
 }
 
+@media only screen and (max-width: 992px) {
+  .css-1k9xpz4-MuiDataGrid-root .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)>.MuiDataGrid-cell {
+    overflow: auto !important;
+  }
+  .css-1k9xpz4-MuiDataGrid-root .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)>.MuiDataGrid-cell::-webkit-scrollbar{
+   display: none;
+  }
+  
+}
+
+@media only screen and (max-width: 430px) {
+  .css-1a17b5f-MuiFormControl-root-MuiTextField-root {
+    width: 172% !important;
+  }
+  .smsInput{
+    width: 140% !important;
+  }
+  .css-1equabv-MuiGrid-root {
+    max-width: 42% !important;
+  }
+}
+
+@media only screen and (max-width: 482px) {
+.toggleBtn,.smsBtn{
+    width: 52%;
+    margin-left: 16px !important;
+    font-size: 14px !important;
+    padding: 10px !important;
+}  
+.supportBtn{
+  padding: 5px 12px !important;
+  margin: 0 12px !important;
+}
+}
+
 
 

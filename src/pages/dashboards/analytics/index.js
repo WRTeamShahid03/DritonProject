@@ -183,7 +183,7 @@ const CrmDashboard = () => {
                 color: 'text.secondary', mb: 2,
                 fontSize: "20px"
               }}>
-                IMPORTANT:  To login in ZOOSK accounts make sure of using Clean, Fresh IP's of your VPN, RDP, Proxy or Residential IP's, if you gets blocked it will be your responsibility because of you using BAD IP and this doesn't mean it's bad account or our mistake. We are here to protect both parties Buyers and Sellers, we have a role as Middleman its our responsibility to make sure that Sellers will not lose money because of a buyer mistake by trying to login with Bad/Blacklisted IPs.<br /><br />
+                IMPORTANT:  To login in ZOOSK accounts make sure of using Clean, Fresh IP's of your VPN, RDP, Proxy or Residential IP's, if you gets blocked it will be your responsibility because of you using BAD IP and this doesn't mean it's bad account or our mistake. We are here to protect both parties Buyers and Sellers, we have a role as Middleman its our responsibility to make sure that Sellers will not lose money.<br /><br />
               </Typography>
             </CardContent>
           </Card>

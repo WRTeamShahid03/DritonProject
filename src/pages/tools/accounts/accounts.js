@@ -9,23 +9,21 @@ import Typography from '@mui/material/Typography'
 import CardHeader from '@mui/material/CardHeader'
 import { DataGrid } from '@mui/x-data-grid'
 
-import MenuItem from '@mui/material/MenuItem'
-
-// ** Custom Component Import
-import CustomTextField from 'src/@core/components/mui/text-field'
 // ** Third Party Components
 import toast from 'react-hot-toast'
 
 // ** Custom Components
 import CustomChip from 'src/@core/components/mui/chip'
 import CustomAvatar from 'src/@core/components/mui/avatar'
+import  QuickSearchToolbar from '../vpn/SearchInput'
 
 // ** Utils Import
 import { getInitials } from 'src/@core/utils/get-initials'
 
 // ** Data Import
 import { rows } from 'src/@fake-db/table/static-data'
-import { Grid } from '@mui/material'
+import { Grid, MenuItem } from '@mui/material'
+import CustomTextField from 'src/@core/components/mui/text-field'
 
 // ** renders client column
 const renderClient = params => {
@@ -68,7 +66,27 @@ const getFullName = params =>
 const TableColumns = () => {
     // ** States
     const [paginationModel, setPaginationModel] = useState({ page: 0, pageSize: 7 })
-    const [hideNameColumn, setHideNameColumn] = useState({ full_name: true })
+    const [hideNameColumn, setHideNameColumn] = useState({ type: true ,city: true})
+    const [data] = useState(rows)
+    const [searchText, setSearchText] = useState('')
+    const [filteredData, setFilteredData] = useState([])
+
+    const handleSearch = searchValue => {
+        setSearchText(searchValue)
+        const searchRegex = new RegExp(escapeRegExp(searchValue), 'i')
+    
+        const filteredRows = data.filter(row => {
+          return Object.keys(row).some(field => {
+            // @ts-ignore
+            return searchRegex.test(row[field].toString())
+          })
+        })
+        if (searchValue.length) {
+          setFilteredData(filteredRows)
+        } else {
+          setFilteredData([])
+        }
+      }
 
     const columns = [
         {
@@ -154,10 +172,25 @@ const TableColumns = () => {
 
     return (
         <Card>
+            <CardHeader
+                title='Accounts'
+                action={
+                    <div>
+                        <Button
+                            size='medium'
+                            variant='contained'
+                            onClick={() => setHideNameColumn({ type: !hideNameColumn['type'],city: !hideNameColumn['city'] ,price: !hideNameColumn['price']})}
+                            className='toggleBtn'
+                        >
+                            Toggle Type and Country Column
+                        </Button>
+                    </div>
+                }
+            />
             <div className='container'>
-                <Grid container spacing={12} className='demo-space-x' style={{display: "flex", justifyContent:"center", padding:"30px 0"}}>
+                <Grid container spacing={12} className='demo-space-x' style={{ display: "flex", justifyContent: "center", padding: "30px 0" }}>
                     <Grid item xs={3}>
-                        <CustomTextField select defaultValue='' label='Tool Type' id='custom-select'  fullWidth>
+                        <CustomTextField select defaultValue='' label='Tool Type' id='custom-select' fullWidth>
                             <MenuItem value='' >
                                 <em>None</em>
                             </MenuItem>
@@ -188,13 +221,9 @@ const TableColumns = () => {
                     </Grid>
                 </Grid>
             </div>
-
-
-
-
             <DataGrid
                 autoHeight
-                rows={rows}
+                rows={filteredData.length ? filteredData : data}
                 columns={columns}
                 disableRowSelectionOnClick
                 pageSizeOptions={[7, 10, 25, 50]}
@@ -202,9 +231,32 @@ const TableColumns = () => {
                 columnVisibilityModel={hideNameColumn}
                 onPaginationModelChange={setPaginationModel}
                 onColumnVisibilityModelChange={newValue => setHideNameColumn(newValue)}
+                slots={{ toolbar: QuickSearchToolbar }}
+                    slotProps={{
+                        baseButton: {
+                          size: 'medium',
+                          variant: 'outlined'
+                        },
+                        toolbar: {
+                          value: searchText,
+                          clearSearch: () => handleSearch(''),
+                          onChange: event => handleSearch(event.target.value)
+                        }
+                      }}
             />
-        </Card >
+        </Card>
     )
 }
 
 export default TableColumns
+
+
+
+
+
+
+
+
+
+
+
