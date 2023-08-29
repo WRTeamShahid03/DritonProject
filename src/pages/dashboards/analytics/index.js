@@ -163,7 +163,7 @@ const CrmDashboard = () => {
                 Use our recommendation Residential Proxy IPs to login in ZOOSK accounts. Since days supports team have been using these proxies to test and had Success in logins without getting blocked accounts. So we would like to help you and your business by sharing that with you. If follow our recommended proxies you will have lower chance to block the accounts and 99% of ZOOSK open with Success using those Residential Proxy IPs. <br /><br />
               </Typography>
               <Typography sx={{ color: 'text.secondary', mb: 2 }}>
-                <Link href="https://www.922proxy.com/index.html?inviter_code=8f17d1d7">To buy, here is invitation link: 922Proxy Residential IPs</Link><br /><br />
+                <Link href="https://www.922proxy.com/index.html?inviter_code=8f17d1d7" target='_blank'>To buy, here is invitation link: 922Proxy Residential IPs</Link><br /><br />
               </Typography>
               <Typography variant='h5' sx={{ mb: 2 }}>
                 Note: This solution not only for ZOOSK works but including all other dating accounts!

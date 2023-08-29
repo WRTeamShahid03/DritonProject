@@ -5,12 +5,6 @@ const navigation = () => {
       icon: 'tabler:smart-home',
       badgeColor: 'error',
       children: [
-      
-        // {
-        //   icon: 'tabler:star',
-        //   title: 'Most Solded',
-        //   path: '/dashboards/most-solded'
-        // },
         {
           icon: 'tabler:brand-shopee',
           title: 'Purchases',
@@ -23,6 +17,12 @@ const navigation = () => {
         },
        
       ]
+    },
+    {
+      title: 'Activity',
+      icon: 'mingcute:heartbeat-line',
+      badgeColor: 'error',
+      path: '/Activity'
     },
     {
       title: 'Tools',
@@ -186,8 +186,87 @@ const navigation = () => {
           title: 'Warnings',
           path: '/Support/Warnings'
         },
+        {
+          title: 'email',
+          icon: 'tabler:mail',
+          path: '/Support/email'
+        },
       ]
       },
+    {
+      title: 'Funds',
+      icon: 'bx:dollar',
+      badgeColor: 'error',
+      children: [
+      
+        {
+          icon: 'icons8:plus',
+          title: 'Deposit',
+          path: '/Funds/Deposit'
+        },
+        {
+          icon: 'icon-park-outline:loading-two',
+          title: 'Pending BTC',
+          path: '/Funds/PendingBTC'
+        },
+        {
+          icon: 'icon-park-outline:loading-two',
+          title: 'Pending Crypto',
+          path: '/Funds/PendingCrypto'
+        },
+        {
+          title: 'History',
+          icon: 'game-icons:oil-drum',
+          path: '/Funds/History'
+        },
+      ]
+      },
+    {
+      title: 'Miscellaneous',
+      icon: 'fluent-emoji-high-contrast:books',
+      badgeColor: 'error',
+      children: [
+      
+        {
+          icon: 'iconamoon:profile-light',
+          title: 'Profile',
+          path: '/Miscellaneous/Profile'
+        },
+        {
+          icon: 'streamline:interface-security-shield-2-shield-protection-security-defend-crime-war-cover',
+          title: 'Security',
+          path: '/Miscellaneous/Security'
+        },
+        {
+          icon: 'basil:notification-outline',
+          title: 'Notification',
+          path: '/Miscellaneous/Notification'
+        },
+        {
+          title: 'Logs',
+          icon: 'ep:clock',
+          path: '/Miscellaneous/Logs'
+        },
+      ]
+      },
+      {
+        title: 'Terms And Rules',
+        icon: 'streamline:interface-content-book-content-books-book-close',
+        badgeColor: 'error',
+        path: '/TermsAndRules/'
+        },
+      {
+        title: 'Affiliate',
+        icon: 'tdesign:share',
+        badgeColor: 'error',
+        path: '/Affiliate/'
+        },
+      {
+        title: 'Seller',
+        icon: 'iconamoon:profile-light',
+        badgeColor: 'error',
+        path: '/Seller/'
+        },
     {
       sectionTitle: 'Apps & Pages'
     },

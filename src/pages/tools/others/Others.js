@@ -1,185 +1,31 @@
-// ** React Imports
-import { useState } from 'react'
-
 // ** MUI Imports
-import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
-import CardHeader from '@mui/material/CardHeader'
-import { DataGrid } from '@mui/x-data-grid'
-
-// ** Third Party Components
-import toast from 'react-hot-toast'
-
-// ** Custom Components
-import CustomChip from 'src/@core/components/mui/chip'
-import CustomAvatar from 'src/@core/components/mui/avatar'
-import QuickSearchToolbar from '../vpn/SearchInput'
-
-// ** Utils Import
-import { getInitials } from 'src/@core/utils/get-initials'
-
-// ** Data Import
-import { rows } from './StaticData'
-import { Grid, MenuItem } from '@mui/material'
+import Paper from '@mui/material/Paper'
+import Table from '@mui/material/Table'
+import TableRow from '@mui/material/TableRow'
+import TableHead from '@mui/material/TableHead'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import { Button, Card, CardHeader, Grid,  MenuItem } from '@mui/material'
 import CustomTextField from 'src/@core/components/mui/text-field'
+import { Box } from '@mui/system'
+import IconButton from '@mui/material/IconButton'
 
-// ** renders client column
-const renderClient = params => {
-    const { row } = params
-    const stateNum = Math.floor(Math.random() * 6)
-    const states = ['success', 'error', 'warning', 'info', 'primary', 'secondary']
-    const color = states[stateNum]
-    if (row.avatar.length) {
-        return <CustomAvatar src={`/images/avatars/${row.avatar}`} sx={{ mr: 3, width: '1.875rem', height: '1.875rem' }} />
-    } else {
-        return (
-            <CustomAvatar skin='light' color={color} sx={{ mr: 3, fontSize: '.8rem', width: '1.875rem', height: '1.875rem' }}>
-                {getInitials(row.full_name ? row.full_name : 'John Doe')}
-            </CustomAvatar>
-        )
-    }
+import Icon from 'src/@core/components/icon'
+
+const createData = (type, country, info, price, seller) => {
+    return { type, country, info, price, seller }
 }
 
-const statusObj = {
-    1: { title: 'current', color: 'primary' },
-    2: { title: 'professional', color: 'success' },
-    3: { title: 'rejected', color: 'error' },
-    4: { title: 'resigned', color: 'warning' },
-    5: { title: 'applied', color: 'info' }
-}
+const rows = [
+    createData('Foap(Paid)', "US", "Coins = 40 , published_photos_count = 0 , sex = female , total_photos_sold = 0 , uploaded_photos_count = 20 , paypal_verified_account = True", "10.00", "Magnus0"),
+    createData('Foap(Paid)', "US", "Coins = 40 , published_photos_count = 0 , sex = female , total_photos_sold = 0 , uploaded_photos_count = 20 , paypal_verified_account = False", "10.00", "Magnus0"),
+]
 
-// ** Full Name Getter
-const getFullName = params =>
-    toast(
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {renderClient(params)}
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                <Typography noWrap variant='body2' sx={{ color: 'text.primary', fontWeight: 600 }}>
-                    {params.row.full_name}
-                </Typography>
-            </Box>
-        </Box>
-    )
-
-const Others = () => {
-    // ** States
-    const [paginationModel, setPaginationModel] = useState({ page: 0, pageSize: 7 })
-    const [hideNameColumn, setHideNameColumn] = useState({ type: true, city: true ,price:true})
-    const [data] = useState(rows)
-    const [searchText, setSearchText] = useState('')
-    const [filteredData, setFilteredData] = useState([])
-
-    const handleSearch = searchValue => {
-        setSearchText(searchValue)
-        const searchRegex = new RegExp(escapeRegExp(searchValue), 'i')
-    
-        const filteredRows = data.filter(row => {
-          return Object.Others(row).some(field => {
-            // @ts-ignore
-            return searchRegex.test(row[field].toString())
-          })
-        })
-        if (searchValue.length) {
-          setFilteredData(filteredRows)
-        } else {
-          setFilteredData([])
-        }
-      }
-
-
-      const columns = [
-
-        {
-            flex: 0.175,
-            minWidth: 120,
-            headerName: 'Type',
-            field: 'type',
-            renderCell: params => (
-                <Typography variant='body2' sx={{ color: 'text.primary' }}>
-                    {params.row.type}
-                </Typography>
-
-            )
-        },
-        {
-            flex: 0.175,
-            minWidth: 120,
-            headerName: 'Country',
-            field: 'city',
-            renderCell: params => (
-                <Typography variant='body2' sx={{ color: 'text.primary' }}>
-                    {params.row.country}
-                </Typography>
-            )
-        },
-        {
-            flex: 2.5,
-            minWidth: 120,
-            headerName: 'Infprmation',
-            field: 'information',
-            renderCell: params => (
-                <>
-                    <Typography variant='body2' sx={{ color: 'text.primary' }}>
-                        {params.row.information}
-                    </Typography>
-                </>
-            )
-        },
-        {
-            flex: 0.175,
-            minWidth: 120,
-            headerName: 'Price',
-            field: 'price',
-            renderCell: params => (
-                <Typography variant='body2' sx={{ color: 'text.primary' }}>
-                    {params.row.price}
-                </Typography>
-            )
-        },
-        {
-            flex: 0.175,
-            minWidth: 120,
-            headerName: 'Seller',
-            field: 'seller',
-            renderCell: params => (
-                <Button size='small' color='primary' onClick={() => getFullName(params)}>
-                    {params.row.seller}
-                </Button>
-
-            )
-        },
-        {
-            flex: 0.175,
-            minWidth: 120,
-            headerName: 'Buy',
-            field: 'buy',
-            renderCell: params => (
-                <Button size='small' variant='contained' color='success' onClick={() => getFullName(params)}>
-                    Buy
-                </Button>
-
-            )
-        },
-        {
-            flex: 0.175,
-            minWidth: 120,
-            headerName: 'Bulk',
-            field: 'bulk',
-            renderCell: params => (
-                <Button size='small' variant='contained' color='primary' onClick={() => getFullName(params)}>
-                    +
-                </Button>
-            )
-        },
-    ]
-
-
+const Others = props => {
     return (
         <>
-      
-
+  
         <Card style={{ 
             margin: "20px 0",
             marginBottom: "34px",
@@ -192,122 +38,120 @@ const Others = () => {
             <Button size='small' variant='contained' color='primary' style={{ 
                 margin: "2px 8px"
              }}>
-               JetBlue
+              JetBlue
             </Button>
             <Button size='small' variant='contained' color='primary' style={{ 
                 margin: "2px 8px"
              }}>
-               ChatGPT
+              ChatGPT
             </Button>
             <Button size='small' variant='contained' color='primary' style={{ 
                 margin: "2px 8px"
              }}>
-               TextNow
-            </Button>
-            <Button size='small' variant='contained' color='primary' style={{ 
-                margin: "2px 8px"
-             }}>
-               Google Voice
+              TextNow
             </Button>
 
             </Grid>
         </Card>
+
         <Card>
-            <CardHeader
-                title='Others'
-                action={
-                    <div>
-                        <Button
-                            size='medium'
-                            variant='contained'
-                            onClick={() => setHideNameColumn({ type: !hideNameColumn['type'], city: !hideNameColumn['city'] ,price: !hideNameColumn['price'],seller: !hideNameColumn['seller'] })}
-                        >
-                            Toggle Type and Country Column
-                        </Button>
-                    </div>
-                }
-            />
+
+            <CardHeader title="Others" />
+
             <div className='container'>
                 <Grid container spacing={12} className='demo-space-x' style={{ display: "flex", justifyContent: "center", padding: "30px 0" }}>
                     <Grid item xs={3}>
                         <CustomTextField select defaultValue='' label='Tool Type' id='custom-select' fullWidth>
-                            <MenuItem value={"Youtube"}>JetBlue</MenuItem>
-                            <MenuItem value={"Youtube"}>Foap(Paid)</MenuItem>
-                            <MenuItem value={"Youtube"}>DuaLingo</MenuItem>
-                            <MenuItem value={"Youtube"}>TradingView</MenuItem>
-                            <MenuItem value={"Youtube"}>Google Vioce</MenuItem>
+                            <MenuItem value={"YouTube"}>YouTube</MenuItem>
+                            <MenuItem value={"Instagram"}>Instagram</MenuItem>
                         </CustomTextField>
                     </Grid>
                     <Grid item xs={3}>
                         <CustomTextField select defaultValue='' label='Country' id='custom-select' fullWidth>
-                            <MenuItem value={"Global"}>US</MenuItem>
-                            <MenuItem value={"Global"}>USA</MenuItem>
+                            <MenuItem value={"Global"}>Global</MenuItem>
                             <MenuItem value={"N/A"}>N/A</MenuItem>
                         </CustomTextField>
                     </Grid>
                     <Grid item xs={3}>
                         <CustomTextField select defaultValue='' label='Seller' id='custom-select' fullWidth>
-                            <MenuItem value={"VIP"}>Magus0</MenuItem>
-                            <MenuItem value={"CheapDealer"}>Windows11</MenuItem>
-                            <MenuItem value={"CheapDealer"}>VIP</MenuItem>
-                            <MenuItem value={"CheapDealer"}>HeadQuaters</MenuItem>
-                            <MenuItem value={"CheapDealer"}>KingCrackers</MenuItem>
-                            <MenuItem value={"CheapDealer"}>MrPikachu</MenuItem>
+                            <MenuItem value={"Cheaper"}>Cheaper</MenuItem>
+                            <MenuItem value={"VIP"}>VIP</MenuItem>
                         </CustomTextField>
                     </Grid>
                 </Grid>
+
+
             </div>
-            <DataGrid
-                    autoHeight
-                    rows={filteredData.length ? filteredData : data}
-                    columns={columns}
-                    disableRowSelectionOnClick
-                    pageSizeOptions={[7, 10, 25, 50]}
-                    paginationModel={paginationModel}
-                    columnVisibilityModel={hideNameColumn}
-                    onPaginationModelChange={setPaginationModel}
-                    onColumnVisibilityModelChange={newValue => setHideNameColumn(newValue)}
-                    slots={{ toolbar: QuickSearchToolbar }}
-                    slotProps={{
-                        baseButton: {
-                            size: 'medium',
-                            variant: 'outlined'
-                        },
-                        toolbar: {
-                            value: searchText,
-                            clearSearch: () => handleSearch(''),
-                            onChange: event => handleSearch(event.target.value)
-                        }
-                    }}
-                />
+            <CustomTextField
+                value={props.value}
+                placeholder='Search…'
+                onChange={props.onChange}
+                InputProps={{
+                    startAdornment: (
+                        <Box sx={{ mr: 2, display: 'flex' }}>
+                            <Icon fontSize='1.25rem' icon='tabler:search' />
+                        </Box>
+                    ),
+                    endAdornment: (
+                        <IconButton size='small' title='Clear' aria-label='Clear' onClick={props.clearSearch}>
+                            <Icon fontSize='1.25rem' icon='tabler:x' />
+                        </IconButton>
+                    )
+                }}
+                sx={{
+
+                    m: "15px",
+                    width: {
+                        xs: 1,
+                        sm: 'auto'
+                    },
+                    '& .MuiInputBase-root > svg': {
+                        mr: 2
+                    }
+                }}
+            />
+            <TableContainer component={Paper}>
+                <Table sx={{ minWidth: 650 }} size='small' aria-label='a dense table'>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>TYPE</TableCell>
+                            <TableCell align='left'>COUNTRY</TableCell>
+                            <TableCell align='left'>INFORMATION</TableCell>
+                            <TableCell align='left'>PRICE</TableCell>
+                            <TableCell align='left'>SELLER</TableCell>
+                            <TableCell align='left'>BUY</TableCell>
+                            <TableCell align='left'>BULK</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {rows.map(row => (
+                            <TableRow key={row.info} sx={{ '&:last-of-type  td, &:last-of-type  th': { border: 0 } }}>
+
+
+                                <TableCell component='th' scope='row'>
+                                    {row.type}
+                                </TableCell>
+                                <TableCell align='left'>{row.country}</TableCell>
+                                <TableCell align='left'>{row.info}</TableCell>
+                                <TableCell align='left'>{row.price}</TableCell>
+                                <TableCell align='left'>
+                                <Button  size="small">{row.seller}</Button>
+                                </TableCell>
+
+                                <TableCell align='left'>
+                                    <Button variant='contained' color='success' size="small">Buy</Button>
+                                </TableCell>
+                                <TableCell align='left'>
+                                    <Button variant='contained' color='success' size="small">+</Button>
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
         </Card>
-    </>
+        </>
     )
 }
 
 export default Others
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-               

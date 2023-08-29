@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@300;500&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300;500&display=swap');
+
 html,
 body {
   min-height: 100%;
@@ -19,10 +20,12 @@ code {
   color: #d400ff;
   border-radius: 0.1335rem;
 }
+
 code:not([class*='language-']):before,
 code:not([class*='language-']):after {
   content: '`';
 }
+
 code[class*='language-'] {
   padding: 0;
 }
@@ -44,47 +47,95 @@ code[class*='language-'] {
   font-family: 'Montserrat', sans-serif;
 }
 
-.css-b0hv4d-MuiTableRow-root .MuiTableCell-head:not(.MuiTableCell-paddingCheckbox):first-child, .css-b0hv4d-MuiTableRow-root .MuiTableCell-root:not(.MuiTableCell-paddingCheckbox):first-child {
+.css-b0hv4d-MuiTableRow-root .MuiTableCell-head:not(.MuiTableCell-paddingCheckbox):first-child,
+.css-b0hv4d-MuiTableRow-root .MuiTableCell-root:not(.MuiTableCell-paddingCheckbox):first-child {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 15px;
   color: #5e5873;
 }
 
-@media only screen and (max-width: 992px) {
-  .css-1k9xpz4-MuiDataGrid-root .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)>.MuiDataGrid-cell {
-    overflow: auto !important;
+
+@media only screen and (max-width: 1399px) {
+  .profileCard{
+    width: 100% !important;
   }
-  .css-1k9xpz4-MuiDataGrid-root .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)>.MuiDataGrid-cell::-webkit-scrollbar{
-   display: none;
+  .profileFooter{
+    width: 94px;
+  }
+ 
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .depositeGrid{
+    max-width: 500% !important;
+  }
+  .referalBox{
+    padding: 0px !important;
   }
   
 }
 
-@media only screen and (max-width: 430px) {
-  .css-1a17b5f-MuiFormControl-root-MuiTextField-root {
-    width: 172% !important;
-  }
-  .smsInput{
-    width: 140% !important;
-  }
-  .css-1equabv-MuiGrid-root {
-    max-width: 42% !important;
+@media only screen and (max-width: 1199px) {
+
+  .profileFooter{
+    width: 130px;
   }
 }
 
+@media only screen and (max-width: 400px) {
+
+  .profileFooter{
+    width: 100px;
+  }
+   .profileFooter span{
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .css-1k9xpz4-MuiDataGrid-root .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)>.MuiDataGrid-cell {
+    overflow: auto !important;
+  }
+
+  .css-1k9xpz4-MuiDataGrid-root .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)>.MuiDataGrid-cell::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 430px) {
+  .css-1a17b5f-MuiFormControl-root-MuiTextField-root {
+    width: 162% !important;
+  }
+
+  .smsInput {
+    width: 140% !important;
+  }
+
+  .requestInput {
+    max-width: 42% !important;
+  }
+  .profileInput{
+    width: 100% !important;
+  }
+}
+  /* .css-kfnegd-MuiInputBase-root-MuiFilledInput-root {
+} */
+
 @media only screen and (max-width: 482px) {
-.toggleBtn,.smsBtn{
+
+  .toggleBtn,
+  .smsBtn {
     width: 52%;
     margin-left: 16px !important;
     font-size: 14px !important;
     padding: 10px !important;
-}  
-.supportBtn{
-  padding: 5px 12px !important;
-  margin: 0 12px !important;
+  }
+
+  .supportBtn {
+    padding: 5px 12px !important;
+    margin: 0 12px !important;
+  }
 }
-}
-
-
-

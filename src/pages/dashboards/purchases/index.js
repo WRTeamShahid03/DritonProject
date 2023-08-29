@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
+import Breadcrum from 'src/pages/components/Breadcrum';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography';
-import PageHeader from 'src/@core/components/page-header';
 import { CardHeader, Grid } from '@mui/material';
 import AnalyticsProject from '../analytics/analystics';
-import { Box } from '@mui/system';
 
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
@@ -16,27 +14,11 @@ import Link from 'next/link'
 
 // ** Icon Imports
 import Icon from 'src/@core/components/icon'
-import { Breadcrumbs } from '@mui/material'
-import UserViewLeft from 'src/views/apps/user/view/UserViewLeft';
-import DialogEditUserInfo from 'src/views/pages/dialog-examples/DialogEditUserInfo';
 
 const index = () => {
     return (
         <>
-            <Breadcrumbs aria-label="breadcrumb" sx={{
-                margin: "22px 0px", fontSize: "22px"
-            }}>
-                <Link underline="hover" color="inherit" href="/">
-                    Dashboard
-                </Link>
-                <Link
-                    color="inherit"
-                    href="/material-ui/getting-started/installation/"
-                >
-                    Purchase Tools
-                </Link>
-                <Typography color="text.primary"></Typography>
-            </Breadcrumbs>
+             <Breadcrum title="Purchase" />
 
             <Card className="purchaseCard">
                 <CardHeader title='Purchased Tools' />

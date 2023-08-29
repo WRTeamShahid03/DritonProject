@@ -6,10 +6,12 @@ import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
-import { Button, Card, CardHeader, Grid, Icon, IconButton, MenuItem } from '@mui/material'
+import { Button, Card, CardHeader, Grid,  MenuItem } from '@mui/material'
 import CustomTextField from 'src/@core/components/mui/text-field'
-import Search from './Search'
 import { Box } from '@mui/system'
+import IconButton from '@mui/material/IconButton'
+
+import Icon from 'src/@core/components/icon'
 
 const createData = (type, country, info, price, seller) => {
     return { type, country, info, price, seller }
@@ -27,45 +29,32 @@ const SocialNetworkTable = props => {
 
         <Card>
 
-            <CardHeader title="Dating" />
+            <CardHeader title="Social Network" />
 
             <div className='container'>
                 <Grid container spacing={12} className='demo-space-x' style={{ display: "flex", justifyContent: "center", padding: "30px 0" }}>
                     <Grid item xs={3}>
                         <CustomTextField select defaultValue='' label='Tool Type' id='custom-select' fullWidth>
-                            <MenuItem value='' >
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
+                            <MenuItem value={"YouTube"}>YouTube</MenuItem>
+                            <MenuItem value={"Instagram"}>Instagram</MenuItem>
                         </CustomTextField>
                     </Grid>
                     <Grid item xs={3}>
                         <CustomTextField select defaultValue='' label='Country' id='custom-select' fullWidth>
-                            <MenuItem value='' >
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
+                            <MenuItem value={"Global"}>Global</MenuItem>
+                            <MenuItem value={"N/A"}>N/A</MenuItem>
                         </CustomTextField>
                     </Grid>
                     <Grid item xs={3}>
                         <CustomTextField select defaultValue='' label='Seller' id='custom-select' fullWidth>
-                            <MenuItem value='' >
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
+                            <MenuItem value={"Cheaper"}>Cheaper</MenuItem>
+                            <MenuItem value={"VIP"}>VIP</MenuItem>
                         </CustomTextField>
                     </Grid>
                 </Grid>
 
 
             </div>
-
             <CustomTextField
                 value={props.value}
                 placeholder='Search…'

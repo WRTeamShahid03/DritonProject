@@ -1,20 +1,12 @@
-import { Breadcrumbs, Button, Card, CardHeader, Grid, Typography } from '@mui/material'
-import Link from 'next/link'
+import { Card, Grid, Typography } from '@mui/material'
 import React from 'react'
 import OrderTable from './OrderTable'
-import { IconButton } from '@mui/material'
-import { Icon } from '@iconify/react'
+import Breadcrum from 'src/pages/components/Breadcrum'
 
 const OrderRdp = () => {
   return (
     <>
-      <Breadcrumbs aria-label="breadcrumb" sx={{
-        margin: "22px 0px", fontSize: "22px"
-      }}>
-        <Link underline="hover" color="info" href="/">
-          RDPs
-        </Link>
-      </Breadcrumbs>
+       <Breadcrum title="RDPs" />
       <Grid container spacing={6}>
 
         <Grid item xs={12} sm={12} lg={9}>

@@ -127,8 +127,8 @@ const TableStickyHeader = () => {
 
                 <Grid container spacing={10} className='demo-space-x' sx={{display: "flex",justifyContent:"center", p:"20px",
               flexDirection: "column", }}>
-                    <Grid item xs={3}>
-                        <CustomTextField select defaultValue='' label='My interst is' id='custom-select'  fullWidth>
+                    <Grid item xs={3} className='requestInput'>
+                        <CustomTextField select defaultValue='' label='My interst is' id='custom-select'  fullWidth >
                             <MenuItem value='' >
                                 <em>Accounts</em>
                             </MenuItem>
@@ -136,22 +136,25 @@ const TableStickyHeader = () => {
                             <MenuItem value={"RDps"}>RDps</MenuItem>
                         </CustomTextField>
                     </Grid>
-                    <Grid item xs={3}>
-                        <CustomTextField  defaultValue='' label='And Specialy i Need' placeholder="shells,mailer,paypal,POF,..." id='custom-select' fullWidth>
+
+                    <Grid item xs={3} className='requestInput'>
+                        <CustomTextField  defaultValue='' label='And Specialy i Need' placeholder="shells,mailer,paypal,POF,..." id='custom-select' fullWidth  className="customInput">
                             
                         </CustomTextField>
                     </Grid>
-                    <Grid item xs={3}>
-                        <CustomTextField select defaultValue='' label='About Important' id='custom-select' fullWidth>
+
+                    <Grid item xs={3} className='requestInput'>
+                        <CustomTextField select defaultValue='' label='About Important' id='custom-select' fullWidth className="customInput">
                             <MenuItem value='' >
                                 <em>Urgent</em>
                             </MenuItem>
                             <MenuItem value={"Asap"}>Asap</MenuItem>
                             <MenuItem value={"No Matter"}>No Matter</MenuItem>
-                        </CustomTextField>
+                        </CustomTextField >
                     </Grid>
-                    <Grid item xs={3}>
-                        <CustomTextField select defaultValue='' label='For Quantity' id='custom-select' fullWidth>
+
+                    <Grid item xs={3} className='requestInput'>
+                        <CustomTextField select defaultValue='' label='For Quantity' id='custom-select' fullWidth className="customInput" >
                             <MenuItem value='' >
                                 <em>Bulk</em>
                             </MenuItem>
