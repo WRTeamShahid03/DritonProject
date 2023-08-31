@@ -149,8 +149,20 @@ const CrmDashboard = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={6}>
-          <AnalyticsSourceVisits />
+        <Grid item xs={12} sm={6} md={6}>
+          <Card>
+            <CardContent>
+              <Typography variant='h5' sx={{ mb: 2 }}>
+                IMPORTANT for Zoosk Accounts!
+              </Typography>
+              <Typography sx={{
+                color: 'text.secondary', mb: 2,
+                fontSize: "20px"
+              }}>
+                IMPORTANT:  To login in ZOOSK accounts make sure of using Clean, Fresh IP's of your VPN, RDP, Proxy or Residential IP's, if you gets blocked it will be your responsibility because of you using BAD IP and this doesn't mean it's bad account or our mistake. We are here to protect both parties Buyers and Sellers, we have a role as Middleman its our responsibility to make sure that Sellers will not lose money.We are here to protect both parties Buyers and Sellers, we have a role as Middleman. <br /><br />
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
 
         <Grid item xs={12} sm={6} md={6}>
@@ -173,21 +185,8 @@ const CrmDashboard = () => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={6}>
-          <Card>
-            <CardContent>
-              <Typography variant='h5' sx={{ mb: 2 }}>
-                IMPORTANT for Zoosk Accounts!
-              </Typography>
-              <Typography sx={{
-                color: 'text.secondary', mb: 2,
-                fontSize: "20px"
-              }}>
-                IMPORTANT:  To login in ZOOSK accounts make sure of using Clean, Fresh IP's of your VPN, RDP, Proxy or Residential IP's, if you gets blocked it will be your responsibility because of you using BAD IP and this doesn't mean it's bad account or our mistake. We are here to protect both parties Buyers and Sellers, we have a role as Middleman its our responsibility to make sure that Sellers will not lose money.<br /><br />
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+     
+
         <Grid item xs={12} sm={6} md={6}>
           <Card>
             <CardContent>
@@ -204,13 +203,6 @@ const CrmDashboard = () => {
             </CardContent>
           </Card>
         </Grid>
-
-
-
-
-
-
-
 
       </Grid>
     </ApexChartWrapper>

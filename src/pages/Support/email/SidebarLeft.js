@@ -140,16 +140,16 @@ const SidebarLeft = props => {
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/Support/email/sent'
+              href='/Support/email/answered'
               onClick={handleListItemClick}
               sx={{
                 py: 1.5,
-                borderLeftColor: handleActiveItem('folder', 'sent') ? 'primary.main' : 'transparent'
+                borderLeftColor: handleActiveItem('folder', 'answered') ? 'primary.main' : 'transparent'
               }}
             >
               <ListItemIcon
                 sx={{
-                  color: handleActiveItem('folder', 'sent') ? 'primary.main' : 'text.secondary'
+                  color: handleActiveItem('folder', 'answered') ? 'primary.main' : 'text.secondary'
                 }}
               >
                 <Icon icon='tabler:send' />
@@ -158,7 +158,7 @@ const SidebarLeft = props => {
                 primary='Answered'
                 primaryTypographyProps={{
                   noWrap: true,
-                  sx: { fontWeight: 500, ...(handleActiveItem('folder', 'sent') && { color: 'primary.main' }) }
+                  sx: { fontWeight: 500, ...(handleActiveItem('folder', 'answered') && { color: 'primary.main' }) }
                 }}
               />
             </ListItemStyled>

@@ -164,7 +164,7 @@ const MailLog = props => {
 
   const foldersObj = {
     inbox: [foldersConfig.spam, foldersConfig.trash],
-    sent: [foldersConfig.trash],
+    answered: [foldersConfig.trash],
     draft: [foldersConfig.trash],
     spam: [foldersConfig.inbox, foldersConfig.trash],
     trash: [foldersConfig.inbox, foldersConfig.spam]

@@ -18,6 +18,7 @@ const Commissions = () => {
     const rows = [
 
     ]
+    
     return (
         <>
             <Card>

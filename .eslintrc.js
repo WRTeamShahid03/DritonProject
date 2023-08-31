@@ -28,7 +28,7 @@ module.exports = {
     'lines-around-comment': [
       'error',
       {
-        beforeLineComment: true,
+        beforeLineComment: false,
         beforeBlockComment: true,
         allowBlockStart: true,
         allowClassStart: true,
@@ -38,7 +38,7 @@ module.exports = {
     ],
 
     // add new line above return
-    'newline-before-return': 'error',
+    'newline-before-return': 'off',
 
     // add new line below import
     'import/newline-after-import': [

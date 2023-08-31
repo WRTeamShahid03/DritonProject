@@ -13,58 +13,45 @@ import Icon from 'src/@core/components/icon'
 import CustomChip from 'src/@core/components/mui/chip'
 import OptionsMenu from 'src/@core/components/option-menu'
 
+
+
 const data = [
   {
-    amount: '1.2k',
-    trendNumber: 4.2,
+    type: 'UnPaid',
     icon: 'tabler:shadow',
-    title: 'Direct Source',
-    subtitle: 'Direct link click'
+    title: 'Ourtime',
   },
   {
-    amount: '31.5k',
-    trendNumber: 8.2,
-    icon: 'tabler:globe',
-    title: 'Social Networks',
-    subtitle: 'Social Channels'
+    type: 'UnPaid',
+    icon: 'tabler:shadow',
+    title: 'Match',
   },
   {
-    amount: '893',
-    trendNumber: 2.4,
-    icon: 'tabler:mail',
-    title: 'Email Newsletter',
-    subtitle: 'Mail Campaigns'
+    type: 'Paid',
+    icon: 'tabler:shadow',
+    title: 'Edate',
   },
   {
-    amount: '342',
-    trendNumber: 0.4,
-    trend: 'negative',
-    title: 'Referrals',
-    icon: 'tabler:external-link',
-    subtitle: 'Impact Radius Visits'
+    type: 'Unpaid',
+    icon: 'tabler:shadow',
+    title: 'ChristianMingle',
   },
   {
-    title: 'ADVT',
-    amount: '2.15k',
-    trendNumber: 9.1,
-    subtitle: 'Google ADVT',
-    icon: 'tabler:discount-2'
+    type: 'Unpaid',
+    icon: 'tabler:shadow',
+    title: 'ChristianMingle',
   },
-  {
-    title: 'Other',
-    amount: '12.5k',
-    trendNumber: 6.2,
-    icon: 'tabler:star',
-    subtitle: 'Many Sources'
-  }
-]
 
-const AnalyticsSourceVisits = () => {
+  
+];
+
+
+const MostSoldedTable = () => {
   return (
     <Card>
       <CardHeader
-        title='Source Visits'
-        subheader='38.4k Visitors'
+        title='Most Solded'
+        subheader='TOOL TYPE'
         action={
           <OptionsMenu
             options={['Last Week', 'Last Month', 'Last Year']}
@@ -99,20 +86,9 @@ const AnalyticsSourceVisits = () => {
               >
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <Typography variant='h6'>{item.title}</Typography>
-                  <Typography variant='body2' sx={{ color: 'text.disabled' }}>
-                    {item.subtitle}
-                  </Typography>
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Typography sx={{ mr: 4, color: 'text.secondary' }}>{item.amount}</Typography>
-                  <CustomChip
-                    rounded
-                    size='small'
-                    skin='light'
-                    sx={{ lineHeight: 1 }}
-                    color={item.trend === 'negative' ? 'error' : 'success'}
-                    label={`${item.trend === 'negative' ? '-' : '+'}${item.trendNumber}%`}
-                  />
+                <Box sx={{ display: 'flex', alignItems: 'center' ,mt: 4}}>
+                  <Typography sx={{ mr: 4, color: 'text.secondary' }}>{item.type}</Typography>
                 </Box>
               </Box>
             </Box>
@@ -123,4 +99,4 @@ const AnalyticsSourceVisits = () => {
   )
 }
 
-export default AnalyticsSourceVisits
+export default MostSoldedTable

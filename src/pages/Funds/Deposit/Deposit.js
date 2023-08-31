@@ -47,7 +47,7 @@ const Deposit = () => {
                             <Grid container spacing={6} >
                                 <Grid item sm={12} lg={4} >
                                     <Card sx={{ position: 'relative', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", boxShadow: 'none' }}>
-                                        <CardMedia sx={{ height: '12.625rem', width: "100%", backgroundColor: "#f7931b" }} />
+                                        <CardMedia sx={{ height: '150px', width: "100%", backgroundColor: "#f7931b" }} />
                                         <Avatar
                                             alt='BitCoin'
                                             src='/images/Bitcoin.svg.png'
@@ -55,7 +55,7 @@ const Deposit = () => {
                                                 width: 100,
                                                 height: 100,
                                                 // left: '1.313rem',
-                                                top: '10.28125rem',
+                                                top: '6.28125rem',
                                                 position: 'absolute',
                                                 border: theme => `8px solid ${theme.palette.common.white}`
                                             }}
@@ -180,7 +180,7 @@ const Deposit = () => {
                             <Grid container spacing={6} >
                                 <Grid item sm={12} lg={4} >
                                     <Card sx={{ position: 'relative', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", boxShadow: 'none' }}>
-                                        <CardMedia sx={{ height: '12.625rem', width: "100%", backgroundColor: "#315d9e" }} />
+                                        <CardMedia sx={{ height: '150px', width: "100%", backgroundColor: "#315d9e" }} />
                                         <Avatar
                                             alt='LiteCoin'
                                             src='/images/Litecoin.png'
@@ -188,7 +188,7 @@ const Deposit = () => {
                                                 width: 100,
                                                 height: 100,
                                                 // left: '1.313rem',
-                                                top: '10.28125rem',
+                                                top: '6.28125rem',
                                                 position: 'absolute',
                                                 border: theme => `8px solid ${theme.palette.common.white}`
                                             }}
@@ -313,7 +313,7 @@ const Deposit = () => {
                         <Grid container spacing={6} >
                                 <Grid item sm={12} lg={4} >
                                     <Card sx={{ position: 'relative', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", boxShadow: 'none' }}>
-                                        <CardMedia sx={{ height: '12.625rem', width: "100%", backgroundColor: "#bc3023" }} />
+                                        <CardMedia sx={{ height: '150px', width: "100%", backgroundColor: "#bc3023" }} />
                                         <Avatar
                                             alt='perfectMoney'
                                             src='/images/perfectMoney.png'
@@ -321,7 +321,7 @@ const Deposit = () => {
                                                 width: 100,
                                                 height: 100,
                                                 // left: '1.313rem',
-                                                top: '10.28125rem',
+                                                top: '6.28125rem',
                                                 position: 'absolute',
                                                 border: theme => `8px solid ${theme.palette.common.white}`
                                             }}
@@ -407,7 +407,7 @@ const Deposit = () => {
                         <Grid container spacing={6} >
                                 <Grid item sm={12} lg={4} >
                                     <Card sx={{ position: 'relative', display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", boxShadow: 'none' }}>
-                                        <CardMedia sx={{ height: '12.625rem', width: "100%", backgroundImage: `url(${tronBG.src})`}} />
+                                        <CardMedia sx={{ height: '150px', width: "100%", backgroundImage: `url(${tronBG.src})`}} />
                                         <Avatar
                                             alt='Tron'
                                             src='/images/tron.png'
@@ -415,7 +415,7 @@ const Deposit = () => {
                                                 width: 100,
                                                 height: 100,
                                                 // left: '1.313rem',
-                                                top: '10.28125rem',
+                                                top: '6.28125rem',
                                                 position: 'absolute',
                                                 border: theme => `8px solid ${theme.palette.common.white}`
                                             }}
