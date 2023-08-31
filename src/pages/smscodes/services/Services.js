@@ -28,10 +28,12 @@ import { Button, Grid, MenuItem } from '@mui/material'
 import CustomTextField from 'src/@core/components/mui/text-field'
 import SMSModal from '../SMSModal'
 // import { rows } from './staticData'
-import rows from './staticData'
 
 // ** renders client column
 const renderClient = params => {
+
+   
+
     const { row } = params
     const stateNum = Math.floor(Math.random() * 6)
     const states = ['success', 'error', 'warning', 'info', 'primary', 'secondary']
@@ -48,6 +50,16 @@ const renderClient = params => {
 }
 
 
+const rows = [
+    {
+      id: 1,
+      avatar: '8.png',
+      service: "Paypal",
+      number: "+13512308449",
+      sms: "Paypal:Your Secuity code is: 417387.Your code expires in 10 minutes.Please don't reply @www.paypal.com #417387",
+      date: "2023-07-03/01:33:38"
+    },
+  ]
 
 const columns = [
     {
