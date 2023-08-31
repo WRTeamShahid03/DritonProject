@@ -1,4 +1,4 @@
-const rows = [
+export const rows = [
     {
       id: 1,
       avatar: '8.png',
@@ -8,4 +8,3 @@ const rows = [
       date: "2023-07-03/01:33:38"
     },
   ]
-  export default rows

@@ -23,10 +23,12 @@ import { getInitials } from 'src/@core/utils/get-initials'
 
 // ** Data Import
 // import { rows } from 'src/@fake-db/table/static-data'
-import { rows } from './staticData'
+
 import { Button, Grid, MenuItem } from '@mui/material'
 import CustomTextField from 'src/@core/components/mui/text-field'
 import SMSModal from '../SMSModal'
+// import { rows } from './staticData'
+import rows from './staticData'
 
 // ** renders client column
 const renderClient = params => {

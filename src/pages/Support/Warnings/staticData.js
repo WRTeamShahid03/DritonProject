@@ -1,4 +1,4 @@
- const rows = [
+export const rows = [
     {
       id: 1,
       country: "United Kingdom",
@@ -57,4 +57,3 @@
     },
 ]
 
-export default rows
