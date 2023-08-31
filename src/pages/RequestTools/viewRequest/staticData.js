@@ -1,4 +1,4 @@
-export const rows = [
+ const rows = [
     {
       id: 21445,
       type: "accounts",
@@ -35,3 +35,5 @@ export const rows = [
       dataRequest: "2023-8-20"
     },
 ]
+
+export default rows

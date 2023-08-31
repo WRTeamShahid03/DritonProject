@@ -1,4 +1,4 @@
-export const rows = [
+ const rows = [
 
     {
       id: 1,
@@ -71,3 +71,4 @@ export const rows = [
     
   ]
   
+  export default rows

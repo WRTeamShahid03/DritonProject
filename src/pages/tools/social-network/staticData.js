@@ -1,4 +1,4 @@
-export const rows = [
+const rows = [
     {
       id: 1,
       avatar: '8.png',
@@ -69,4 +69,4 @@ export const rows = [
     },
     
   ]
-  
+  export default rows
