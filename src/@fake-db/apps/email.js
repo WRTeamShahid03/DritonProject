@@ -209,7 +209,7 @@ const data = {
       labels: ['company'],
       time: 'Fri Dec 14 2018 04:49:23 GMT+0000 (GMT)',
       replies: [],
-      folder: 'draft',
+      folder: 'closedTicket',
       isRead: true
     },
     {
@@ -287,7 +287,7 @@ const data = {
       labels: ['important'],
       time: 'Tue Jan 03 2018 08:05:33 GMT+0000 (GMT)',
       replies: [],
-      folder: 'draft',
+      folder: 'closedTicket',
       isRead: false
     },
     {
@@ -346,7 +346,7 @@ const data = {
       labels: ['personal'],
       time: 'Tue Jan 04 2018 21:26:54 GMT+0000 (GMT)',
       replies: [],
-      folder: 'sent',
+      folder: 'answered',
       isRead: true
     },
     {
@@ -372,7 +372,7 @@ const data = {
       labels: ['important'],
       time: 'Tue Jan 05 2018 19:00:00 GMT+0000 (GMT)',
       replies: [],
-      folder: 'draft',
+      folder: 'closedTicket',
       isRead: true
     },
     {
@@ -450,7 +450,7 @@ const data = {
       labels: ['company'],
       time: 'Tue Jan 08 2018 00:36:40 GMT+0000 (GMT)',
       replies: [],
-      folder: 'sent',
+      folder: 'answered',
       isRead: true
     },
     {
@@ -666,7 +666,7 @@ const data = {
       labels: ['company'],
       time: new Date(new Date().getTime() - 5 * 20 * 60 * 1000),
       replies: [],
-      folder: 'draft',
+      folder: 'closedTicket',
       isRead: false
     },
     {
@@ -1042,7 +1042,32 @@ const data = {
       replies: [],
       folder: 'starred',
       isRead: true
-    }
+    },{
+      id: 67,
+      from: {
+        email: 'efinessy7@sbwire.com',
+        name: 'Eugenie Finessy',
+        avatar: '/images/avatars/2.png'
+      },
+      to: [
+        {
+          name: 'me',
+          email: 'johndoe@odnoklassniki.ru'
+        }
+      ],
+      subject: "BOOK LOVER'S DAY",
+      cc: [],
+      bcc: [],
+      message:
+        '<p>Hello John, </p><p>Whenever you read a good book, you are making efforts to open a new door to let more light come in.</p><p>May you are blessed with more and more books. Happy National Book Lover’s Day to you.</p><p>Regards</p><p>Eugenie Finessy</p>',
+      attachments: [],
+      isStarred: false,
+      labels: ['personal'],
+      time: 'Tue Jan 04 2018 21:26:54 GMT+0000 (GMT)',
+      replies: [],
+      folder: 'openTicket',
+      isRead: true
+    },
   ]
 }
 let paramsFilteredMails = []
@@ -1080,7 +1105,7 @@ mock.onGet('/apps/email/emails').reply(config => {
   // ------------------------------------------------
   const emailsMeta = {
     inbox: data.emails.filter(email => !email.isRead && email.folder === 'inbox').length,
-    draft: data.emails.filter(email => email.folder === 'draft').length,
+    closedTicket: data.emails.filter(email => email.folder === 'closedTicket').length,
     spam: data.emails.filter(email => !email.isRead && email.folder === 'spam').length
   }
 

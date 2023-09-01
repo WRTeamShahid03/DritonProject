@@ -102,6 +102,22 @@ const MailLog = props => {
       )
     },
     {
+      name: 'openTicket',
+      icon: (
+        <Box component='span' sx={{ mr: 2, display: 'flex' }}>
+          <Icon icon='tabler:pencil' fontSize={20} />
+        </Box>
+      )
+    },
+    {
+      name: 'answered',
+      icon: (
+        <Box component='span' sx={{ mr: 2, display: 'flex' }}>
+          <Icon icon='tabler:pencil' fontSize={20} />
+        </Box>
+      )
+    },
+    {
       name: 'spam',
       icon: (
         <Box component='span' sx={{ mr: 2, display: 'flex' }}>
@@ -144,6 +160,22 @@ const MailLog = props => {
         </Box>
       )
     },
+    openTicket: {
+      name: 'openTicket',
+      icon: (
+        <Box component='span' sx={{ mr: 2, display: 'flex' }}>
+          <Icon icon='tabler:alert-octagon' fontSize={20} />
+        </Box>
+      )
+    },
+    answered: {
+      name: 'answered',
+      icon: (
+        <Box component='span' sx={{ mr: 2, display: 'flex' }}>
+          <Icon icon='tabler:alert-octagon' fontSize={20} />
+        </Box>
+      )
+    },
     trash: {
       name: 'trash',
       icon: (
@@ -164,7 +196,8 @@ const MailLog = props => {
 
   const foldersObj = {
     inbox: [foldersConfig.spam, foldersConfig.trash],
-    answered: [foldersConfig.trash],
+    openTicket: [foldersConfig.openTicket],
+    answered: [foldersConfig.answered],
     draft: [foldersConfig.trash],
     spam: [foldersConfig.inbox, foldersConfig.trash],
     trash: [foldersConfig.inbox, foldersConfig.spam]

@@ -174,22 +174,22 @@ const navigation = () => {
         {
           icon: 'jam:ticket',
           title: 'Tickets',
-          path: '/Support/Tickets'
+          path: '/support/Tickets',
         },
         {
           icon: 'ic:outline-report-problem',
           title: 'Reports',
-          path: '/Support/Reports'
+          path: '/support/Reports'
         },
         {
           icon: 'tabler:user-x',
           title: 'Warnings',
-          path: '/Support/Warnings'
+          path: '/support/Warnings'
         },
         {
-          title: 'email',
+          title: 'Tickett',
           icon: 'tabler:mail',
-          path: '/Support/email'
+          path: '/support/tickettt'
         },
       ]
       },

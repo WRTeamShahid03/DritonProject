@@ -114,7 +114,7 @@ const SidebarLeft = props => {
     >
       <Box sx={{ p: 6, overflowY: 'hidden' }}>
         <Button fullWidth variant='contained' onClick={toggleComposeOpen}>
-          Compose
+          Create Ticket
         </Button>
       </Box>
       <ScrollWrapper>
@@ -122,7 +122,7 @@ const SidebarLeft = props => {
           <List component='div' sx={{ '& .MuiListItemIcon-root': { mr: 2 } }}>
             <ListItemStyled
               component={Link}
-              href='/apps/email/inbox'
+              href='/support/tickettt/openTicket'
               onClick={handleListItemClick}
               sx={{ py: 1.5, borderLeftColor: activeInboxCondition ? 'primary.main' : 'transparent' }}
             >
@@ -130,7 +130,7 @@ const SidebarLeft = props => {
                 <Icon icon='tabler:mail' />
               </ListItemIcon>
               <ListItemText
-                primary='Inbox'
+                primary='Open Ticket'
                 primaryTypographyProps={{
                   noWrap: true,
                   sx: { fontWeight: 500, ...(activeInboxCondition && { color: 'primary.main' }) }
@@ -140,49 +140,49 @@ const SidebarLeft = props => {
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/apps/email/sent'
+              href='/support/tickettt/answered'
               onClick={handleListItemClick}
               sx={{
                 py: 1.5,
-                borderLeftColor: handleActiveItem('folder', 'sent') ? 'primary.main' : 'transparent'
+                borderLeftColor: handleActiveItem('folder', 'answered') ? 'primary.main' : 'transparent'
               }}
             >
               <ListItemIcon
                 sx={{
-                  color: handleActiveItem('folder', 'sent') ? 'primary.main' : 'text.secondary'
+                  color: handleActiveItem('folder', 'answered') ? 'primary.main' : 'text.secondary'
                 }}
               >
                 <Icon icon='tabler:send' />
               </ListItemIcon>
               <ListItemText
-                primary='Sent'
+                primary='Answered'
                 primaryTypographyProps={{
                   noWrap: true,
-                  sx: { fontWeight: 500, ...(handleActiveItem('folder', 'sent') && { color: 'primary.main' }) }
+                  sx: { fontWeight: 500, ...(handleActiveItem('folder', 'answered') && { color: 'primary.main' }) }
                 }}
               />
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/apps/email/draft'
+              href='/support/tickettt/closedTicket'
               onClick={handleListItemClick}
               sx={{
                 py: 1.5,
-                borderLeftColor: handleActiveItem('folder', 'draft') ? 'primary.main' : 'transparent'
+                borderLeftColor: handleActiveItem('folder', 'closedTicket') ? 'primary.main' : 'transparent'
               }}
             >
               <ListItemIcon
                 sx={{
-                  color: handleActiveItem('folder', 'draft') ? 'primary.main' : 'text.secondary'
+                  color: handleActiveItem('folder', 'closedTicket') ? 'primary.main' : 'text.secondary'
                 }}
               >
                 <Icon icon='tabler:file' />
               </ListItemIcon>
               <ListItemText
-                primary='Draft'
+                primary='Closed Ticket'
                 primaryTypographyProps={{
                   noWrap: true,
-                  sx: { fontWeight: 500, ...(handleActiveItem('folder', 'draft') && { color: 'primary.main' }) }
+                  sx: { fontWeight: 500, ...(handleActiveItem('folder', 'closedTicket') && { color: 'primary.main' }) }
                 }}
               />
               {RenderBadge('draft', 'warning')}

@@ -199,7 +199,7 @@ const ComposePopup = props => {
         }}
       >
         <Typography variant='h5' sx={{ fontWeight: 500 }}>
-          Create Ticket
+         Create Ticket
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <IconButton sx={{ p: 1, mr: 2 }} onClick={handleMinimize}>
@@ -381,7 +381,7 @@ const ComposePopup = props => {
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Button variant='contained' onClick={handlePopupClose} sx={{ '& svg': { mr: 2 } }}>
             <Icon icon='tabler:send' fontSize='1.125rem' />
-            Open
+            Send
           </Button>
           <IconButton size='small' sx={{ ml: 3, color: 'text.secondary' }}>
             <Icon icon='tabler:paperclip' fontSize='1.25rem' />

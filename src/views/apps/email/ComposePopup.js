@@ -199,7 +199,7 @@ const ComposePopup = props => {
         }}
       >
         <Typography variant='h5' sx={{ fontWeight: 500 }}>
-          Compose Mail
+         Create Ticket
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <IconButton sx={{ p: 1, mr: 2 }} onClick={handleMinimize}>

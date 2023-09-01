@@ -120,9 +120,9 @@ const SidebarLeft = props => {
       <ScrollWrapper>
         <Box sx={{ pt: 0, overflowY: 'hidden' }}>
           <List component='div' sx={{ '& .MuiListItemIcon-root': { mr: 2 } }}>
-            <ListItemStyled
+            {/* <ListItemStyled
               component={Link}
-              href='/Support/email/inbox'
+              href='/support/tickettt/openTicket'
               onClick={handleListItemClick}
               sx={{ py: 1.5, borderLeftColor: activeInboxCondition ? 'primary.main' : 'transparent' }}
             >
@@ -137,10 +137,34 @@ const SidebarLeft = props => {
                 }}
               />
               {RenderBadge('inbox', 'primary')}
-            </ListItemStyled>
+            </ListItemStyled> */}
+
             <ListItemStyled
               component={Link}
-              href='/Support/email/answered'
+              href='/support/tickettt/openTicket'
+              onClick={handleListItemClick}
+              sx={{
+                py: 1.5,
+                borderLeftColor: handleActiveItem('folder', 'openTicket') ? 'primary.main' : 'transparent'
+              }}
+            >
+               <ListItemIcon sx={{ color: activeInboxCondition ? 'primary.main' : 'text.secondary' }}>
+                <Icon icon='tabler:mail' />
+              </ListItemIcon>
+
+              <ListItemText
+                primary='Open Ticket'
+                primaryTypographyProps={{
+                  noWrap: true,
+                  sx: { fontWeight: 500, ...(handleActiveItem('folder', 'openTicket') && { color: 'primary.main' }) }
+                }}
+              />
+            </ListItemStyled>
+
+
+            <ListItemStyled
+              component={Link}
+              href='/support/tickettt/answered'
               onClick={handleListItemClick}
               sx={{
                 py: 1.5,
@@ -164,32 +188,32 @@ const SidebarLeft = props => {
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/Support/email/draft'
+              href='/support/tickettt/closedTicket'
               onClick={handleListItemClick}
               sx={{
                 py: 1.5,
-                borderLeftColor: handleActiveItem('folder', 'draft') ? 'primary.main' : 'transparent'
+                borderLeftColor: handleActiveItem('folder', 'closedTicket') ? 'primary.main' : 'transparent'
               }}
             >
               <ListItemIcon
                 sx={{
-                  color: handleActiveItem('folder', 'draft') ? 'primary.main' : 'text.secondary'
+                  color: handleActiveItem('folder', 'closedTicket') ? 'primary.main' : 'text.secondary'
                 }}
               >
                 <Icon icon='tabler:file' />
               </ListItemIcon>
               <ListItemText
-                primary=' Closed Tickets'
+                primary='Closed Ticket'
                 primaryTypographyProps={{
                   noWrap: true,
-                  sx: { fontWeight: 500, ...(handleActiveItem('folder', 'draft') && { color: 'primary.main' }) }
+                  sx: { fontWeight: 500, ...(handleActiveItem('folder', 'closedTicket') && { color: 'primary.main' }) }
                 }}
               />
               {RenderBadge('draft', 'warning')}
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/Support/email/starred'
+              href='/apps/email/starred'
               onClick={handleListItemClick}
               sx={{
                 py: 1.5,
@@ -213,7 +237,7 @@ const SidebarLeft = props => {
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/Support/email/spam'
+              href='/apps/email/spam'
               onClick={handleListItemClick}
               sx={{
                 py: 1.5,
@@ -238,7 +262,7 @@ const SidebarLeft = props => {
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/Support/email/trash'
+              href='/apps/email/trash'
               onClick={handleListItemClick}
               sx={{
                 py: 1.5,
@@ -270,7 +294,7 @@ const SidebarLeft = props => {
           <List component='div'>
             <ListItemStyled
               component={Link}
-              href='/Support/email/label/personal'
+              href='/apps/email/label/personal'
               onClick={handleListItemClick}
               sx={{
                 py: 0.75,
@@ -290,7 +314,7 @@ const SidebarLeft = props => {
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/Support/email/label/company'
+              href='/apps/email/label/company'
               onClick={handleListItemClick}
               sx={{
                 py: 0.75,
@@ -310,7 +334,7 @@ const SidebarLeft = props => {
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/Support/email/label/important'
+              href='/apps/email/label/important'
               onClick={handleListItemClick}
               sx={{
                 py: 0.75,
@@ -330,7 +354,7 @@ const SidebarLeft = props => {
             </ListItemStyled>
             <ListItemStyled
               component={Link}
-              href='/Support/email/label/private'
+              href='/apps/email/label/private'
               onClick={handleListItemClick}
               sx={{
                 py: 0.75,
