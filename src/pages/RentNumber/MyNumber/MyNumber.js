@@ -2,6 +2,7 @@ import { Breadcrumbs, Button } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import MyNumTable from './MyNumTable'
+import FAQsModal from 'src/pages/smscodes/FAQsModal'
 
 const MyNumber = () => {
   return (
@@ -12,7 +13,7 @@ const MyNumber = () => {
                 <Link underline="hover" color="info" href="/">
                     My Numbers
                 </Link>
-                <Button size='small' variant='contained' color='primary' >FAQs</Button>
+              <FAQsModal/>
             </Breadcrumbs>
 
             <MyNumTable/>

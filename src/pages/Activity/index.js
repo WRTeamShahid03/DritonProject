@@ -1,5 +1,5 @@
 import React from 'react'
-import Breadcrum from '../components/Breadcrum'
+import Breadcrum from 'src/pages/components/Breadcrum'
 import { Card, CardHeader, Grid, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import Link from 'next/link'

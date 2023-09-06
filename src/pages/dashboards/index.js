@@ -16,7 +16,7 @@ import ListItemSelected from 'src/views/components/list/ListItemSelected'
 import AnalyticsSourceVisits from 'src/views/dashboards/analytics/AnalyticsSourceVisits'
 import Link from 'next/link'
 
-const CrmDashboard = () => {
+const index = () => {
   return (
     <ApexChartWrapper>
       <Grid container spacing={6}>
@@ -209,4 +209,4 @@ const CrmDashboard = () => {
   )
 }
 
-export default CrmDashboard
+export default index

@@ -2,170 +2,268 @@
 import { useState } from 'react'
 
 // ** MUI Imports
-import Paper from '@mui/material/Paper'
-import Table from '@mui/material/Table'
-import TableRow from '@mui/material/TableRow'
-import TableHead from '@mui/material/TableHead'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableContainer from '@mui/material/TableContainer'
-import TablePagination from '@mui/material/TablePagination'
 import { Button, Card, CardHeader, Grid, MenuItem, Typography } from '@mui/material'
 import CustomTextField from 'src/@core/components/mui/text-field'
 
-const columns = [
-  { id: 'date', label: 'Date', minWidth: 170 },
-  { id: 'expiry', label: 'expiry', minWidth: 100 },
-  {
-    id: 'country',
-    label: 'country',
-    minWidth: 170,
-    align: 'right',
-    format: value => value.toLocaleString('en-US')
-  },
-  {
-    id: 'description',
-    label: 'description',
-    minWidth: 170,
-    align: 'right',
-    format: value => value.toLocaleString('en-US')
-  },
-  {
-    id: 'price',
-    label: 'price',
-    minWidth: 170,
-    align: 'right',
-    format: value => value.toFixed(2)
-  },
-  {
-    id: 'ip',
-    label: 'ip',
-    minWidth: 170,
-    align: 'right',
-    format: value => value.toFixed(2)
-  },
-  {
-    id: 'username',
-    label: 'username',
-    minWidth: 170,
-    align: 'right',
-    format: value => value.toFixed(2)
-  },
-  {
-    id: 'password',
-    label: 'password',
-    minWidth: 170,
-    align: 'right',
-    format: value => value.toFixed(2)
-  },
-  {
-    id: 'status',
-    label: 'status',
-    minWidth: 170,
-    align: 'right',
-    format: value => value.toFixed(2)
-  },
-  {
-    id: 'renew',
-    label: 'renew',
-    minWidth: 170,
-    align: 'right',
-    format: value => value.toFixed(2)
-  },
-]
-function createData(name, code, population, size) {
-  const density = population / size
 
-  return { name, code, population, size, density }
+// ======= viewRequest ===== //
+// ** React Imports
+
+// ** MUI Imports
+import Box from '@mui/material/Box'
+import { DataGrid } from '@mui/x-data-grid'
+import {viewRow} from './staticData'
+
+// ** Custom Component Import
+import QuickSearchToolbar from './Search'
+// ** Third Party Components
+import toast from 'react-hot-toast'
+
+// ** Custom Components
+import CustomAvatar from 'src/@core/components/mui/avatar'
+
+// ** Utils Import
+import { getInitials } from 'src/@core/utils/get-initials'
+
+const renderClient = params => {
+
+    
+  const { row } = params
+  const stateNum = Math.floor(Math.random() * 6)
+  const states = ['success', 'error', 'warning', 'info', 'primary', 'secondary']
+  const color = states[stateNum]
+  if (row.avatar.length) {
+      return <CustomAvatar src={`/images/avatars/${row.avatar}`} sx={{ mr: 3, width: '1.875rem', height: '1.875rem' }} />
+  } else {
+      return (
+          <CustomAvatar skin='light' color={color} sx={{ mr: 3, fontSize: '.8rem', width: '1.875rem', height: '1.875rem' }}>
+              {getInitials(row.full_name ? row.full_name : 'John Doe')}
+          </CustomAvatar>
+      )
+  }
 }
 
-const rows = [
-  createData('India', 'IN', 1324171354, 3287263),
-  createData('China', 'CN', 1403500365, 9596961),
-  createData('Italy', 'IT', 60483973, 301340),
-  createData('United States', 'US', 327167434, 9833520),
-  createData('Canada', 'CA', 37602103, 9984670),
-  createData('Australia', 'AU', 25475400, 7692024),
-  createData('Germany', 'DE', 83019200, 357578),
-  createData('Ireland', 'IE', 4857000, 70273),
-  createData('Mexico', 'MX', 126577691, 1972550),
-  createData('Japan', 'JP', 126317000, 377973),
-  createData('France', 'FR', 67022000, 640679),
-  createData('United Kingdom', 'GB', 67545757, 242495),
-  createData('Russia', 'RU', 146793744, 17098246),
-  createData('Nigeria', 'NG', 200962417, 923768),
-  createData('Brazil', 'BR', 210147125, 8515767)
-]
+
+// ** Full Name Getter
+const getFullName = params =>
+  toast(
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          {renderClient(params)}
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+              <Typography noWrap variant='body2' sx={{ color: 'text.primary', fontWeight: 600 }}>
+                  {params.row.full_name}
+              </Typography>
+          </Box>
+      </Box>
+  )
+
 
 const TableStickyHeader = () => {
-  // ** States
-  const [page, setPage] = useState(0)
-  const [rowsPerPage, setRowsPerPage] = useState(10)
 
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage)
-  }
+  
 
-  const handleChangeRowsPerPage = event => {
-    setRowsPerPage(+event.target.value)
-    setPage(0)
-  }
+   // ** States
+   const [paginationModel, setPaginationModel] = useState({ page: 0, pageSize: 7 })
+   const [hideNameColumn, setHideNameColumn] = useState({ full_name: true })
+   const [searchText, setSearchText] = useState('')
+   const [filteredData, setFilteredData] = useState([])
+   const [data] = useState(viewRow)
+
+   const handleSearch = searchValue => {
+       setSearchText(searchValue)
+       const searchRegex = new RegExp(escapeRegExp(searchValue), 'i')
+   
+       const filteredRows = data.filter(row => {
+         return Object.keys(row).some(field => {
+           // @ts-ignore
+           return searchRegex.test(row[field].toString())
+         })
+       })
+       if (searchValue.length) {
+         setFilteredData(filteredRows)
+       } else {
+         setFilteredData([])
+       }
+     }
+
+   const columns = [
+       {
+           flex: 0.175,
+           minWidth: 120,
+           headerName: 'ID',
+           field: 'id',
+           renderCell: params => (
+               <Typography variant='body2' sx={{ color: 'text.primary' }}>
+                   {params.row.id}
+               </Typography>
+           )
+       },
+       {
+           flex: 0.175,
+           minWidth: 120,
+           headerName: 'TYPE',
+           field: 'type',
+           renderCell: params => (
+               <Typography variant='body2' sx={{ color: 'text.primary' }}>
+                   {params.row.type}
+               </Typography>
+           )
+       },
+       {
+           flex: 0.175,
+           minWidth: 470,
+           headerName: 'Acc Type',
+           field: 'acc type',
+           renderCell: params => (
+               <Typography variant='body2' sx={{ color: 'text.primary',display: "flex",alignItems: "center" }}>
+
+                   {params.row.accType}
+               
+               {/* {params.row.accType.slice(0,42)+ " " + "..."}  <AccModal acc={params.row.accType}/> */}
+           </Typography>
+           )
+       },
+       {
+           flex: 0.175,
+           minWidth: 120,
+           headerName: 'Important',
+           field: 'important',
+           renderCell: params => (
+               <Typography variant='body2' sx={{ color: 'text.primary' }}>
+                   {params.row.important}
+               </Typography>
+           )
+       },
+       {
+           flex: 0.175,
+           minWidth: 120,
+           headerName: 'Quantity',
+           field: 'quantity',
+           renderCell: params => (
+               <Typography variant='body2' sx={{ color: 'text.primary' }}>
+                   {params.row.quantity}
+               </Typography>
+
+           )
+       },
+       {
+           flex: 0.175,
+           minWidth: 120,
+           headerName: 'Data Request',
+           field: 'data request',
+           renderCell: params => (
+               <Typography variant='body2' sx={{ color: 'text.primary' }}>
+                   {params.row.dataRequest}
+               </Typography>
+           )
+       },
+       {
+           flex: 0.175,
+           minWidth: 120,
+           headerName: 'Delete',
+           field: 'delete',
+           renderCell: params => (
+               <Button size='small' variant='contained' color='error' onClick={() => getFullName(params)}>
+                   Delete
+               </Button>
+
+           )
+       },
+      
+   ]
+
 
   return (
     <>
-    <Card sx={{ 
+      <Card sx={{
         p: "8px"
-     }}>
-      <CardHeader title="Add Request"/>
+      }}>
+        <CardHeader title="Add Request & Tool Requests" />
 
-      <Typography sx={{
-              color: '#ea5455!important',
-              p: "8px", backgroundColor: "rgba(234,84,85,.12)!important;", m: "20px", borderRadius: "5px",
-            }} className="dropDeatails">
-              Credit Card is forbidden on this platform do not request.
-            </Typography>
+        <Typography sx={{
+          color: '#ea5455!important',
+          p: "8px", backgroundColor: "rgba(234,84,85,.12)!important;", m: "20px", borderRadius: "5px",
+        }} className="dropDeatails">
+          Credit Card is forbidden on this platform do not request.
+        </Typography>
 
-                <Grid container spacing={10} className='demo-space-x' sx={{display: "flex",justifyContent:"center", p:"20px",
-              flexDirection: "column", }}>
-                    <Grid item xs={3} className='requestInput'>
-                        <CustomTextField select defaultValue='' label='My interst is' id='custom-select'  fullWidth >
-                            <MenuItem value='' >
-                                <em>Accounts</em>
-                            </MenuItem>
-                            <MenuItem value={"Stuffs"}>Stuffs</MenuItem>
-                            <MenuItem value={"RDps"}>RDps</MenuItem>
-                        </CustomTextField>
-                    </Grid>
+        <Grid container spacing={6}>
 
-                    <Grid item xs={3} className='requestInput'>
-                        <CustomTextField  defaultValue='' label='And Specialy i Need' placeholder="shells,mailer,paypal,POF,..." id='custom-select' fullWidth  className="customInput">
-                            
-                        </CustomTextField>
-                    </Grid>
+          <Grid item xs={12} lg={4}  className='demo-space-x' sx={{
+            display: "flex", justifyContent: "center", p: "20px",
+            flexDirection: "column",pl: '44px !important'
+          }}>
+            <Grid item xs={3} lg={12} className='requestInput'>
+              <CustomTextField select defaultValue='' label='My interst is' id='custom-select' fullWidth >
+                <MenuItem value='' >
+                  <em>Accounts</em>
+                </MenuItem>
+                <MenuItem value={"Stuffs"}>Stuffs</MenuItem>
+                <MenuItem value={"RDps"}>RDps</MenuItem>
+              </CustomTextField>
+            </Grid>
 
-                    <Grid item xs={3} className='requestInput'>
-                        <CustomTextField select defaultValue='' label='About Important' id='custom-select' fullWidth className="customInput">
-                            <MenuItem value='' >
-                                <em>Urgent</em>
-                            </MenuItem>
-                            <MenuItem value={"Asap"}>Asap</MenuItem>
-                            <MenuItem value={"No Matter"}>No Matter</MenuItem>
-                        </CustomTextField >
-                    </Grid>
+            <Grid item xs={3} lg={12} className='requestInput'>
+              <CustomTextField defaultValue='' label='And Specialy i Need' placeholder="shells,mailer,paypal,POF,..." id='custom-select' fullWidth className="customInput">
 
-                    <Grid item xs={3} className='requestInput'>
-                        <CustomTextField select defaultValue='' label='For Quantity' id='custom-select' fullWidth className="customInput" >
-                            <MenuItem value='' >
-                                <em>Bulk</em>
-                            </MenuItem>
-                            <MenuItem value={"Many(>2)"}>Many</MenuItem>
-                            <MenuItem value={"Few(1,2)"}>Few(1,2)</MenuItem>
-                        </CustomTextField>
-                    <Button variant='contained' size='large' sx={{ mt: "12px" }}> Submit </Button>
-                    </Grid>
-                </Grid>
+              </CustomTextField>
+            </Grid>
 
-    
+            <Grid item xs={3} lg={12} className='requestInput'>
+              <CustomTextField select defaultValue='' label='About Important' id='custom-select' fullWidth className="customInput">
+                <MenuItem value='' >
+                  <em>Urgent</em>
+                </MenuItem>
+                <MenuItem value={"Asap"}>Asap</MenuItem>
+                <MenuItem value={"No Matter"}>No Matter</MenuItem>
+              </CustomTextField >
+            </Grid>
+
+            <Grid item xs={3} lg={12} className='requestInput'>
+              <CustomTextField select defaultValue='' label='For Quantity' id='custom-select' fullWidth className="customInput" >
+                <MenuItem value='' >
+                  <em>Bulk</em>
+                </MenuItem>
+                <MenuItem value={"Many(>2)"}>Many</MenuItem>
+                <MenuItem value={"Few(1,2)"}>Few(1,2)</MenuItem>
+              </CustomTextField>
+              <Button variant='contained' size='large' sx={{ mt: "12px" }}> Submit </Button>
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12} lg={8} > 
+          <Card>
+            <CardHeader title="Tools Requests"/> 
+
+            <DataGrid
+                autoHeight
+                rows={filteredData.length ? filteredData : data}
+                columns={columns}
+                disableRowSelectionOnClick
+                pageSizeOptions={[7, 10, 25, 50]}
+                paginationModel={paginationModel}
+                columnVisibilityModel={hideNameColumn}
+                onPaginationModelChange={setPaginationModel}
+                onColumnVisibilityModelChange={newValue => setHideNameColumn(newValue)}
+                slots={{ toolbar: QuickSearchToolbar }}
+                    slotProps={{
+                        baseButton: {
+                          size: 'medium',
+                          variant: 'outlined'
+                        },
+                        toolbar: {
+                          value: searchText,
+                          clearSearch: () => handleSearch(''),
+                          onChange: event => handleSearch(event.target.value)
+                        }
+                      }}
+            />
+        </Card >
+          </Grid>
+
+        </Grid>
+
+
       </Card>
     </>
   )

@@ -1,4 +1,4 @@
-export const rows = [
+export const viewRow = [
     {
       id: 21445,
       type: "accounts",

@@ -6,7 +6,7 @@ import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
-import { Button, IconButton } from '@mui/material'
+import { Button, Card, CardHeader, IconButton } from '@mui/material'
 import { Icon } from '@iconify/react'
 
 const createData = (countryFlag, country, singleService, multipleService) => {
@@ -23,6 +23,8 @@ const rows = [
 
 const RentNumTable = () => {
     return (
+        <Card> 
+            <CardHeader title="Rent Number"/> 
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label='simple table'>
                 <TableHead>
@@ -59,6 +61,7 @@ const RentNumTable = () => {
                 </TableBody>
             </Table>
         </TableContainer>
+        </Card>
     )
 }
 

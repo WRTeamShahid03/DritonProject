@@ -255,7 +255,6 @@ const TableSelection = () => {
                             multiple: true,
                             displayEmpty: true,
                             value: price,
-                            onChange: e => handleChangePrice(e),
                             inputProps: { 'aria-label': 'Without label' },
                             renderValue: selected => {
                                 if (selected.length === 0) {
@@ -268,11 +267,6 @@ const TableSelection = () => {
                             }
                         }}
                     >
-                        {priceMenu.map(priceMenu => (
-                            <MenuItem key={priceMenu} value={priceMenu}>
-                                {priceMenu}
-                            </MenuItem>
-                        ))}
                     </CustomTextField>
 
                     <Button variant='contained' color='primary' sx={{ my:"20px",width: "100%",fontSize: "18px" }} className='smsBtn'>

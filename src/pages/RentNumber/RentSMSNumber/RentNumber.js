@@ -2,6 +2,7 @@ import { Breadcrumbs, Button } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import RentNumTable from './RentNumTable'
+import FAQsModal from 'src/pages/smscodes/FAQsModal'
 
 
 const RentNumber = () => {
@@ -13,7 +14,7 @@ const RentNumber = () => {
                 <Link underline="hover" color="info" href="/">
                     Rent Number
                 </Link>
-                <Button size='small' variant='contained' color='primary' >FAQs</Button>
+              <FAQsModal/>
             </Breadcrumbs>
             <RentNumTable/>
     </>

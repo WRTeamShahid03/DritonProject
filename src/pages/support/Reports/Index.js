@@ -1,10 +1,10 @@
 import React from 'react'
-import MyNumber from './View'
+import Report from './Report'
 
 const index = () => {
   return (
     <>
-    <MyNumber/>
+      <Report/>
     </>
   )
 }

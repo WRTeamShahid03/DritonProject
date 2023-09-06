@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography';
 import { CardHeader, Grid } from '@mui/material';
-import AnalyticsProject from '../analytics/analystics';
+import Purchase from './Purchase';
 
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
@@ -58,7 +58,7 @@ const index = () => {
                         <Typography variant='h3' className='verifyH3'>
                             Bypass & Verification Method Steps:
                         </Typography>
-                        <Link href="https://strongtools.ga/pof/verification"> <Button variant='contained' sx={{
+                        <Link href="/pof/verification"> <Button variant='contained' sx={{
                             px: '8',
                             mt: "4px"
                         }}>POF VARIFICATION</Button> </Link>
@@ -70,7 +70,7 @@ const index = () => {
 
                 </CardContent>
 
-                <AnalyticsProject />
+                <Purchase />
 
             </Card>
         </>

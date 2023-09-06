@@ -2,27 +2,20 @@ const navigation = () => {
   return [
     {
       title: 'Dashboards',
-      icon: 'tabler:smart-home',
+      icon: 'pepicons-pencil:house',
       badgeColor: 'error',
-      children: [
-        {
-          icon: 'tabler:brand-shopee',
-          title: 'Purchases',
-          path: '/dashboards/purchases'
-        },
-        {
-          icon: 'tabler:chart-pie-2',
-          title: 'Analytics',
-          path: '/dashboards/analytics'
-        },
-       
-      ]
+      path: '/dashboards/',
     },
+      {
+        icon: 'tabler:brand-shopee',
+        title: 'Purchases',
+        path: '/purchases'
+      },
     {
       title: 'Activity',
       icon: 'mingcute:heartbeat-line',
       badgeColor: 'error',
-      path: '/Activity'
+      path: '/tools/latest'
     },
     {
       title: 'Tools',
@@ -155,13 +148,8 @@ const navigation = () => {
       
         {
           icon: 'basil:add-outline',
-          title: 'Add Request',
+          title: 'Add Request & View Request',
           path: '/RequestTools/addRequest'
-        },
-        {
-          icon: 'carbon:view',
-          title: 'View Requests',
-          path: '/RequestTools/viewRequest'
         },
       ]
       },

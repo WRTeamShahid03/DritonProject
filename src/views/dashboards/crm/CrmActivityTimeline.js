@@ -16,6 +16,8 @@ import MuiCardHeader from '@mui/material/CardHeader'
 // ** Custom Components Imports
 import Icon from 'src/@core/components/icon'
 import OptionsMenu from 'src/@core/components/option-menu'
+import { Button } from '@mui/material'
+import Link from 'next/link'
 
 // Styled Timeline component
 const Timeline = styled(MuiTimeline)({
@@ -48,10 +50,10 @@ const CrmActivityTimeline = () => {
         title={
           <Box sx={{ display: 'flex', alignItems: 'center', '& svg': { mr: 3 } }}>
             <Icon fontSize='1.25rem' icon='tabler:list-details' />
-            <Typography>Get Notification on Telegram</Typography>
+            <Typography>Latest Tools - Get Notification on Telegram </Typography>
           </Box>
         }
-        
+
       />
       <CardContent>
         <Timeline>
@@ -78,7 +80,7 @@ const CrmActivityTimeline = () => {
                 </Typography>
               </Box>
               <Typography variant='body2' sx={{ mb: 2.5 }}>
-              in Dating
+                in Dating
               </Typography>
             </TimelineContent>
           </TimelineItem>
@@ -102,11 +104,11 @@ const CrmActivityTimeline = () => {
                   Ourtime(UnPaid) has been added
                 </Typography>
                 <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-                2 days ago
+                  2 days ago
                 </Typography>
               </Box>
               <Typography variant='body2' sx={{ mb: 2.5 }}>
-              in Dating
+                in Dating
               </Typography>
             </TimelineContent>
           </TimelineItem>
@@ -130,11 +132,11 @@ const CrmActivityTimeline = () => {
                   Ourtime(UnPaid) has been added
                 </Typography>
                 <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-                6 days ago
+                  6 days ago
                 </Typography>
               </Box>
               <Typography variant='body2' sx={{ mb: 2.5 }}>
-              in Dating
+                in Dating
               </Typography>
             </TimelineContent>
           </TimelineItem>
@@ -157,15 +159,22 @@ const CrmActivityTimeline = () => {
                   Ourtime(UnPaid) has been added
                 </Typography>
                 <Typography variant='caption' sx={{ color: 'text.disabled' }}>
-                10 days ago
+                  10 days ago
                 </Typography>
               </Box>
               <Typography variant='body2'>
-              in Dating
+                in Dating
               </Typography>
             </TimelineContent>
           </TimelineItem>
         </Timeline>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Link href="/tools/latest">
+
+            <Button variant='contained'> View All</Button>
+
+          </Link>
+        </Box>
       </CardContent>
     </Card>
   )
