@@ -12,6 +12,7 @@ import { Box } from '@mui/system'
 import IconButton from '@mui/material/IconButton'
 
 import Icon from 'src/@core/components/icon'
+import Link from 'next/link'
 
 const createData = (type, country, info, price, seller) => {
     return { type, country, info, price, seller }
@@ -35,11 +36,11 @@ const DatingTable = props => {
         <Grid item xs={12} sm={6} md={6} xl={12} style={{ 
                 margin: "2px 20px"
              }}> 
-            <Button size='small' variant='contained' color='primary' style={{ 
+            <Link href='/tools/dating/zooks(Unpaid)'><Button size='small' variant='contained' color='primary' style={{ 
                 margin: "2px 8px"
              }}>
                Zooks(Unpaid)
-            </Button>
+            </Button></Link>
             <Button size='small' variant='contained' color='primary' style={{ 
                 margin: "2px 8px"
              }}>
