@@ -17,13 +17,15 @@ const AuthGuard = props => {
         return
       }
       if (auth.user === null && !window.localStorage.getItem('userData')) {
+        console.log("hello")
         if (router.asPath !== '/') {
           router.replace({
-            pathname: '/login',
+            pathname: '/test',
             query: { returnUrl: router.asPath }
           })
         } else {
-          router.replace('/login')
+          // console.log("hello1")
+          router.replace('/test')
         }
       }
     },
