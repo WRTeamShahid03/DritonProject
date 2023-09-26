@@ -47,8 +47,8 @@ const Header = () => {
                                     </Nav>
 
                                     <div className="btns">
-                                        <Link href="" className='register'> Register</Link>
-                                        <Link href="" className='login'> Login</Link>
+                                        <Link href="/register" className='register'> Register</Link>
+                                        <Link href="/login" className='login'> Login</Link>
                                     </div>
 
                                 </Navbar.Collapse>

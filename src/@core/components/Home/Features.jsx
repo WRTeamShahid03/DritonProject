@@ -1,7 +1,8 @@
 import React from 'react'
 import { BsCheck, BsClockFill } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
-import { FaTools, FaBuildingColumns, FaShieldAlt } from "react-icons/fa";
+import { FaTools, FaShieldAlt } from "react-icons/fa";
+import { FaBuildingColumns } from "react-icons/fa6";
 
 const Features = () => {
 
@@ -39,35 +40,35 @@ const Features = () => {
             btn5: "Business",
             btn6: "Cashout",
         },
-        
-    ];
 
-    // const card2Data = [
-    //     {
-    //         id: 0,
-    //         // icon: <FaShieldAlt color='white' size={50} />,
-    //         title: "Security",
-    //         desc: "Strongtools is secured marketplace. We have 2FA and Escrow system.",
-    //     },
-    //     {
-    //         id: 1,
-    //         // icon: <BiSupport color='white' size={50} />,
-    //         title: "Support",
-    //         desc: "Strongtools has 24/7 support. You can contact us anytime.",
-    //     },
-    //     {
-    //         id: 2,
-    //         // icon: <BsClockFill color='white' size={50} />,
-    //         title: "Instant Delivery",
-    //         desc: "Strongtools has instant delivery system. You will get your product instantly.",
-    //     },
-    // ];
+    ]
+
+    const card2Data = [
+        {
+            id: 0,
+            icon: <FaShieldAlt color='white' size={30} />,
+            title: "Security",
+            desc: "Strongtools is secured marketplace. We have 2FA and Escrow system.",
+        },
+        {
+            id: 1,
+            icon: <BiSupport color='white' size={30} />,
+            title: "Support",
+            desc: "Strongtools has 24/7 support. You can contact us anytime.",
+        },
+        {
+            id: 2,
+            icon: <BsClockFill color='white' size={30} />,
+            title: "Instant Delivery",
+            desc: "Strongtools has instant delivery system. You will get your product instantly.",
+        },
+    ];
 
     return (
         <>
             <section id='features'>
                 <div className="container">
-                    <div className="row">
+                    <div className="row cardsWrapper">
                         <div className="col-sm-12 col-md-12 col-lg-12">
                             <h2 className='common_h_tags'>Features</h2>
                             <p className='commom_p_tags'>Explore the features of Strongtools</p>
@@ -106,7 +107,7 @@ const Features = () => {
 
                         <div className="col-sm-12 col-md-12 col-lg-4" >
                             <div class="card card1">
-                                <span className='card1Img'><FaTools color='white' size={50} /></span>
+                                <span className='card1Img'><FaTools color='white' size={30} /></span>
                                 <div class="card-body">
                                     <h5 class="card-title">{cardData[1].title}</h5>
                                     <p class="card-text">{cardData[1].desc}</p>
@@ -138,7 +139,7 @@ const Features = () => {
 
                         <div className="col-sm-12 col-md-12 col-lg-4" >
                             <div class="card card1">
-                                <span className='card1Img'><FaBuildingColumns color='white' size={50} /></span>
+                                <span className='card1Img'><FaBuildingColumns color='white' size={30} /></span>
                                 <div class="card-body">
                                     <h5 class="card-title">{cardData[2].title}</h5>
                                     <p class="card-text">{cardData[2].desc}</p>
@@ -167,6 +168,20 @@ const Features = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {
+                            card2Data.map((e) => {
+                                return <div className="col-sm-12 col-md-12 col-lg-4" >
+                                    <div class="card card1">
+                                        <span className='card1Img'>{e.icon}</span>
+                                        <div class="card-body">
+                                            <h5 class="card-title">{e.title}</h5>
+                                            <p class="card-text">{e.desc}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            })
+                        }
                     </div>
                 </div>
             </section>
@@ -174,4 +189,4 @@ const Features = () => {
     )
 }
 
-export default Features;
+export default Features

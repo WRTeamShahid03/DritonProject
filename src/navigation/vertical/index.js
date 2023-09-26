@@ -247,9 +247,9 @@ const navigation = () => {
         },
       {
         title: 'Seller',
-        icon: 'iconamoon:profile-light',
+        icon: 'ph:user-plus-bold',
         badgeColor: 'error',
-        path: '/seller/'
+        path: '/seller/dashboard'
         },
     
       ]

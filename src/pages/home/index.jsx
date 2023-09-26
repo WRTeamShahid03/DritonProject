@@ -1,9 +1,12 @@
 import React from 'react'
+import Home from 'src/@core/components/Home/Home'
 import BlankLayout from 'src/@core/layouts/BlankLayout'
 
 const test = () => {
   return (
-    <div>test</div>
+    <>
+    <Home/>
+    </>
   )
 }
 test.getLayout = page => <BlankLayout>{page}</BlankLayout>

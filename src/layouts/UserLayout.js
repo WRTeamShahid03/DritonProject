@@ -6,6 +6,7 @@ import Layout from 'src/@core/layouts/Layout'
 
 // ** Navigation Imports
 import VerticalNavItems from 'src/navigation/vertical'
+import sellerNavItems from 'src/seller-navigation/vertical'
 
 
 // ** Component Import
@@ -45,8 +46,11 @@ const UserLayout = ({ children, contentHeightFixed }) => {
       saveSettings={saveSettings}
       contentHeightFixed={contentHeightFixed}
       verticalLayoutProps={{
+        
         navMenu: {
-          navItems: VerticalNavItems()
+          navItems: VerticalNavItems(),
+          sellerNav: sellerNavItems(), 
+
 
           // Uncomment the below line when using server-side menu in vertical layout and comment the above line
           // navItems: verticalMenuItems

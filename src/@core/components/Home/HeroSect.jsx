@@ -1,5 +1,6 @@
 import React from 'react'
-import heroBg from '../assets/css/Images/bk-hero.svg'
+import heroBg from '../../Assets/Images/bk-hero.svg'
+// import { FaBuildingColumns } from "react-icons/fa";
 
 const HeroSect = () => {
     return (
@@ -11,6 +12,7 @@ const HeroSect = () => {
                         <div className="col-sm-12 col-md-12 col-lg-6">
                             <div className="heroWrap">
                                 <div className="heroHeadline">
+                                     {/* <FaBuildingColumns color='white' size={50} /> */}
                                     <h1 className=''><span>Strongtools</span> Best MarketPlace for <span>Buy & Sale</span></h1>
                                 </div>
                                 <div className="heroDesc">

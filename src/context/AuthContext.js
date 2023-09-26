@@ -83,7 +83,7 @@ const AuthProvider = ({ children }) => {
     setUser(null)
     window.localStorage.removeItem('userData')
     window.localStorage.removeItem(authConfig.storageTokenKeyName)
-    router.push('/test')
+    router.push('/home')
   }
 
   const values = {

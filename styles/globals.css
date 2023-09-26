@@ -139,3 +139,10 @@ code[class*='language-'] {
     margin: 0 12px !important;
   }
 }
+
+#sellerSidebar .sidebar{
+  display: flex;
+}
+#sellerSidebar .sidebar img{
+  width: 50px;
+}
