@@ -6,37 +6,41 @@ import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
-import { Button, Card, Grid, Typography } from '@mui/material'
+import { Button, Card, CardHeader, Grid, Typography } from '@mui/material'
+import Breadcrum from 'src/pages/components/Breadcrum'
 
-const createData = (name, calories, fat, carbs, protein) => {
-  return { name, calories, fat, carbs, protein }
+const createData = (id,accType,reportedBy,refund,status,moreInfo) => {
+  return { id,accType,reportedBy,refund,status,moreInfo }
 }
 
 const rows = [
-  
+    createData('','','','','','')
 ]
 
-const ReportTable = () => {
+const index = () => {
   return (
+    <>
+    <Breadcrum title= 'Reports' />
     <Card sx={{ p: '22px' }}>
-     <Typography sx={{ fontSize: '20px', fontWeight: '600' }} >Reports</Typography>
+        <Typography sx={{ fontSize: '20px', fontWeight: '600' }} >Reports</Typography>
       <Grid sx={{ 
         display: 'flex',
         alignItems: "center",
         flexDirection: 'column',
         paddingBottom: "30px"
        }}>
-      <Button variant='contained' className='supportBtn'>Your report will be replied in couple of minutes ,please be patient.If there is any issue to solve by admins can take up to 2H</Button>
 
       </Grid>
       <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} size='small' aria-label='a dense table'>
         <TableHead>
           <TableRow>
-            <TableCell>Date</TableCell>
-            <TableCell align='right'>Message</TableCell>
-            <TableCell align='right'>Status</TableCell>
-            <TableCell align='right'>View Report</TableCell>
+            <TableCell>ID</TableCell>
+            <TableCell align='right'>ACCTYPE</TableCell>
+            <TableCell align='right'>REPORTED BY</TableCell>
+            <TableCell align='right'>REFUND</TableCell>
+            <TableCell align='right'>STATUS</TableCell>
+            <TableCell align='right'>MORE INFO</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -55,8 +59,9 @@ const ReportTable = () => {
       </Table>
     </TableContainer>
     </Card>
+    </>
     
   )
 }
 
-export default ReportTable
+export default index

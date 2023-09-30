@@ -57,39 +57,42 @@ code[class*='language-'] {
 
 
 @media only screen and (max-width: 1399px) {
-  .profileCard{
+  .profileCard {
     width: 100% !important;
   }
-  .profileFooter{
+
+  .profileFooter {
     width: 94px;
   }
- 
+
 }
 
 
 @media only screen and (max-width: 1200px) {
-  .depositeGrid{
+  .depositeGrid {
     max-width: 500% !important;
   }
-  .referalBox{
+
+  .referalBox {
     padding: 0px !important;
   }
-  
+
 }
 
 @media only screen and (max-width: 1199px) {
 
-  .profileFooter{
+  .profileFooter {
     width: 130px;
   }
 }
 
 @media only screen and (max-width: 400px) {
 
-  .profileFooter{
+  .profileFooter {
     width: 100px;
   }
-   .profileFooter span{
+
+  .profileFooter span {
     font-size: 14px !important;
   }
 }
@@ -110,6 +113,49 @@ code[class*='language-'] {
     width: 162% !important;
   }
 
+  #addSingle .css-1a17b5f-MuiFormControl-root-MuiTextField-root,
+  #addSingle .css-1igoo27-MuiFormControl-root-MuiTextField-root,
+  #addSingle .css-13az369-MuiButtonBase-root-MuiButton-root {
+    width: 130% !important;
+    margin-left: -26px !important;
+  }
+
+  #addMultiple .css-1pyy021-MuiTabs-flexContainer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 72%;
+    align-items: flex-start;
+    justify-content: start;
+  }
+  #priceLimits .css-1pyy021-MuiTabs-flexContainer{
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  #addMultiple .css-12jbg7i-MuiTypography-root {
+    margin-left: 0;
+    width: 246px;
+  }
+
+  #addMultiple .css-1igoo27-MuiFormControl-root-MuiTextField-root .MuiInputBase-root.MuiFilledInput-root {
+    width: 248%;
+  }
+
+  #addMultiple .css-1mqo22u-MuiTabs-flexContainer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #addMultiple .css-sue1jc-MuiGrid-root>.MuiGrid-item {
+    margin-right: 125px;
+    margin-left: -28px;
+  }
+
+  #addMultiple .css-1a17b5f-MuiFormControl-root-MuiTextField-root .MuiInputBase-root.MuiInputBase-sizeSmall {
+    border-radius: 6px;
+    width: 62%;
+  }
+
   .smsInput {
     width: 140% !important;
   }
@@ -117,11 +163,23 @@ code[class*='language-'] {
   .requestInput {
     max-width: 42% !important;
   }
-  .profileInput{
+
+  .profileInput {
     width: 100% !important;
   }
+
+  #addSingle .css-1mqo22u-MuiTabs-flexContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  #addSingle .css-18c129c-MuiButtonBase-root-MuiTab-root {
+    max-width: 94px;
+  }
 }
-  /* .css-kfnegd-MuiInputBase-root-MuiFilledInput-root {
+
+/* .css-kfnegd-MuiInputBase-root-MuiFilledInput-root {
 } */
 
 @media only screen and (max-width: 482px) {
@@ -140,9 +198,16 @@ code[class*='language-'] {
   }
 }
 
-#sellerSidebar .sidebar{
-  display: flex;
+#addMultiRightSide .css-1pyy021-MuiTabs-flexContainer {
+  padding-top: 12px;
+  justify-content: space-around;
 }
-#sellerSidebar .sidebar img{
-  width: 50px;
+
+#addMultiRightSide .css-k4l1d2-MuiBadge-badge,
+#addMultiRightSide .css-10nttw6-MuiBadge-badge,
+#addMultiRightSide .css-duz3jo-MuiBadge-badge,
+#addMultiRightSide .css-17caxh5-MuiBadge-badge,
+#addMultiRightSide .css-d6mv1v-MuiBadge-badge {
+  margin-right: 20px;
+  margin-top: 16px;
 }

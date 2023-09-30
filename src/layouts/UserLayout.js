@@ -6,7 +6,7 @@ import Layout from 'src/@core/layouts/Layout'
 
 // ** Navigation Imports
 import VerticalNavItems from 'src/navigation/vertical'
-import sellerNavItems from 'src/seller-navigation/vertical'
+import sellerNavItems from 'src/navigation/seller-navigation/vertical'
 
 
 // ** Component Import

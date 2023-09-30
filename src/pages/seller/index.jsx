@@ -34,7 +34,8 @@ const index = () => {
           }}>
             <Box sx={{
               display: 'flex',
-              gap: '0 12px'
+              gap: '0 12px',
+              justifyContent: 'space-between'
             }}>
 
               <Box>
@@ -65,9 +66,9 @@ const index = () => {
               <Typography sx={{ fontSize: '12px' }}>Updated second ago</Typography>
             </Box>
 
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', mt: '84px' }}>
+            <Grid container spacing={6} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mt: '60px' }}>
 
-              <Box>
+              <Grid item xs={6} md={3} lg={3}>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: "20px" }}>
                   <Box sx={{
                     padding: '8px',
@@ -80,9 +81,9 @@ const index = () => {
                     <Typography>Sales</Typography>
                   </Box>
                 </Box>
-              </Box>
+              </Grid>
 
-              <Box>
+              <Grid item xs={6} md={3} lg={3}>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: "20px" }}>
                   <Box sx={{
                     padding: '8px',
@@ -95,9 +96,9 @@ const index = () => {
                     <Typography>Todays Sales</Typography>
                   </Box>
                 </Box>
-              </Box>
+              </Grid>
 
-              <Box>
+              <Grid item xs={6} md={3} lg={3}>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: "20px" }}>
                   <Box sx={{
                     padding: '8px',
@@ -110,9 +111,9 @@ const index = () => {
                     <Typography>Unbsolds</Typography>
                   </Box>
                 </Box>
-              </Box>
+              </Grid>
 
-              <Box>
+              <Grid item xs={6} md={3} lg={3}>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: "20px" }}>
                   <Box sx={{
                     padding: '8px',
@@ -125,8 +126,8 @@ const index = () => {
                     <Typography >Total Sales</Typography>
                   </Box>
                 </Box>
-              </Box>
-            </Box>
+              </Grid>
+            </Grid>
           </Card>
         </Grid>
 
@@ -247,15 +248,15 @@ const index = () => {
           }}>
 
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <Typography sx={{ color: '#5e5873', fontSize: '18px', fontWeight: '600' }} > Sales Valid Stats</Typography>
+              <Typography sx={{ color: '#5e5873', fontSize: '18px', fontWeight: '600' }} > Bonus Goal Overview</Typography>
               <InformationModal info='This will show you how much you earned and how much you need to reach 1K$ to get bonus.' />
             </Box>
 
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', border: '5px solid lightgray', borderRadius: '50%', padding: '32px 12px', margin: '22px 120px', }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', border: '5px solid lightgray', borderRadius: '50%', padding: '32px 12px',width: '210px',height: '136px', m: 'auto',mt: '48px'}}>
               <Typography sx={{ fontSize: '40px', fontWeight: '100' }}>0%</Typography>
             </Box>
 
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', borderTop: '1px solid lightgray', mt: '80px' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', borderTop: '1px solid lightgray', mt: '50px' }}>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center', justifyContent: 'center', p: '22px' }}>
                 <Typography>Sales</Typography>
                 <Typography sx={{ color: '', fontSize: '20px', fontWeight: '600' }}>0 $</Typography>

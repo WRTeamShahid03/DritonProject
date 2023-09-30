@@ -14,13 +14,12 @@ import IconButton from '@mui/material/IconButton'
 import Icon from 'src/@core/components/icon'
 import Breadcrum from 'src/pages/components/Breadcrum'
 
-const createData = (type, country, info, price, seller) => {
-    return { type, country, info, price, seller }
+const createData = (id,type,accType,inportant,quantity,dateRequest) => {
+    return { id,type,accType,inportant,quantity,dateRequest }
 }
 
 const rows = [
-    createData('Edate(UNPAID)', "USA", "Gender = Man , AGE = 35 , City = Canoga Park , State = California Country = United States", "6.00", "BishopX"),
-    createData('EliteSingles(Unpaid)', "Global", "EliteSingles Unpaid - Age: 48, Gender:MALE - Seeking:FEMALE, Location:Bridgeport/OH/43912", "4.00", "crown27"),
+    createData('Edate(UNPAID)', "USA", "Gender = Man , AGE = 35 , City = Canoga Park , State = California Country = United States", "6.00", "BishopX","sada"),
 ]
 
 const Accounts = props => {
@@ -65,13 +64,12 @@ const Accounts = props => {
                 <Table sx={{ minWidth: 650 }} size='small' aria-label='a dense table'>
                     <TableHead>
                         <TableRow>
-                            <TableCell>TYPE</TableCell>
-                            <TableCell align='left'>COUNTRY</TableCell>
-                            <TableCell align='left'>INFORMATION</TableCell>
-                            <TableCell align='left'>PRICE</TableCell>
-                            <TableCell align='left'>SELLER</TableCell>
+                            <TableCell>ID</TableCell>
+                            <TableCell align='left'>Type</TableCell>
+                            <TableCell align='left'>Inportant</TableCell>
+                            <TableCell align='left'>Quantity</TableCell>
+                            <TableCell align='left'>Date Request</TableCell>
                             <TableCell align='left'>BUY</TableCell>
-                            <TableCell align='left'>BULK</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -90,10 +88,7 @@ const Accounts = props => {
                                 </TableCell>
 
                                 <TableCell align='left'>
-                                    <Button variant='contained' color='success' size="small">Buy</Button>
-                                </TableCell>
-                                <TableCell align='left'>
-                                    <Button variant='contained' color='success' size="small">+</Button>
+                                    <Button variant='contained' color='primary' size="small">Suggest</Button>
                                 </TableCell>
                             </TableRow>
                         ))}
