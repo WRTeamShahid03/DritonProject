@@ -121,7 +121,7 @@ const WarningTable = () => {
 
         
         <Card>
-            <CardHeader title="Warnings"/> 
+            <CardHeader title="Warnings" sx={{ fontSize: '20px', fontWeight: '600' }}/> 
 
             <DataGrid
                 autoHeight

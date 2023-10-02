@@ -149,7 +149,7 @@ const navigation = () => {
         {
           icon: 'basil:add-outline',
           title: 'Add Request & View Request',
-          path: '/RequestTools/addRequest'
+          path: '/request-tools/addRequest'
         },
       ]
       },
@@ -237,13 +237,13 @@ const navigation = () => {
         title: 'Terms And Rules',
         icon: 'streamline:interface-content-book-content-books-book-close',
         badgeColor: 'error',
-        path: '/TermsAndRules/'
+        path: '/terms-and-condition/'
         },
       {
         title: 'Affiliate',
         icon: 'tdesign:share',
         badgeColor: 'error',
-        path: '/Affiliate/'
+        path: '/affiliate/'
         },
       {
         title: 'Seller',

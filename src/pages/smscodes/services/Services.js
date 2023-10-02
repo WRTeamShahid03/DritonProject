@@ -176,7 +176,7 @@ const TableSelection = () => {
 
     return (
         <Card>
-            <CardHeader title='SMS Services' />
+            <CardHeader title='SMS Services' sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             <Grid container spacing={0}>
 

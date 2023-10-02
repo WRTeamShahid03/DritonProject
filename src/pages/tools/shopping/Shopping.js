@@ -28,7 +28,7 @@ const Shopping = props => {
   
         <Card>
 
-            <CardHeader title="Shopping" />
+            <CardHeader title="Shopping" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             <div className='container'>
                 <Grid container spacing={12} className='demo-space-x' style={{ display: "flex", justifyContent: "center", padding: "30px 0" }}>

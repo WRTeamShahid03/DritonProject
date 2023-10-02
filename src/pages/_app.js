@@ -99,6 +99,7 @@ const App = props => {
   const aclAbilities = Component.acl ?? defaultACLObj
 
   return (
+    <>
     <Provider store={store}>
       <CacheProvider value={emotionCache}>
         <Head>
@@ -133,6 +134,8 @@ const App = props => {
         </AuthProvider>
       </CacheProvider>
     </Provider>
+    </>
+
   )
 }
 

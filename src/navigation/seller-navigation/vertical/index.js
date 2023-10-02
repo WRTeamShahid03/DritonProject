@@ -4,7 +4,7 @@ const sellerNav = () => {
       title: 'Dashboard',
       icon: 'pepicons-pencil:house',
       badgeColor: 'error',
-      path: 'seller/dashboard/',
+      path: '/seller/dashboard/',
     },
     {
       title: 'Tools',
@@ -49,49 +49,49 @@ const sellerNav = () => {
       title: 'Price Limits',
       icon: 'eva:monitor-outline',
       badgeColor: 'error',
-      path: 'seller/price-limits'
+      path: '/seller/price-limits'
     },
     {
       title: 'Reports',
       icon: 'ph:warning',
       badgeColor: 'error',
-      path: 'seller/reports'
+      path: '/seller/reports'
     },
     {
       title: 'Warnings',
       icon: 'lucide:user-x-2',
       badgeColor: 'error',
-      path: 'seller/warnings'
+      path: '/seller/warnings'
     },
     {
       title: 'Payouts',
       icon: 'icon-park-outline:dollar',
       badgeColor: 'error',
-      path: 'seller/payouts'
+      path: '/seller/payouts'
     },
     {
       title: 'Rules',
       icon: 'streamline:interface-content-book-content-books-book-close',
       badgeColor: 'error',
-      path: 'seller/rules'
+      path: '/seller/rules'
     },
     {
       title: 'Telegram',
       icon: 'iconoir:telegram',
       badgeColor: 'error',
-      path: 'seller/telegram'
+      path: '/seller/telegram'
     },
     {
       title: 'Seller Group',
       icon: 'iconoir:telegram',
       badgeColor: 'error',
-      path: '/seller/seller-group'
+      path: 'https://t.me/+QHyQb1qXqfY0OGVh'
     },
     {
       title: 'Settings',
       icon: 'uil:setting',
       badgeColor: 'error',
-      path: 'seller/settings'
+      path: '/seller/settings'
     },
     {
       title: 'Back',

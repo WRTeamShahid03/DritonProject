@@ -33,7 +33,7 @@ const Deposit = () => {
     return (
         <>
             <Card>
-                <CardHeader title="Add Money" />
+                <CardHeader title="Add Money" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
                 <Grid item sm={12} md={6} >
                     <TabContext value={value}>

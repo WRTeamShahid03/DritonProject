@@ -29,7 +29,7 @@ const Food = props => {
 
         <Card>
 
-            <CardHeader title="Food" />
+            <CardHeader title="Food" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             <div className='container'>
                 <Grid container spacing={12} className='demo-space-x' style={{ display: "flex", justifyContent: "center", padding: "30px 0" }}>

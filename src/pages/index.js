@@ -5,7 +5,11 @@ import Home from 'src/@core/components/Home/Home'
 const index = () => {
   return (
     <>
-      <Home/>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
+      <Home />
     </>
   )
 }

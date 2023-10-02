@@ -6,7 +6,7 @@ import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
-import { Button, Card, CardHeader, Grid,  MenuItem } from '@mui/material'
+import { Button, Card, CardHeader, Grid,  MenuItem, Typography } from '@mui/material'
 import CustomTextField from 'src/@core/components/mui/text-field'
 import { Box } from '@mui/system'
 import IconButton from '@mui/material/IconButton'
@@ -19,7 +19,7 @@ const createData = (id,type,accType,inportant,quantity,dateRequest) => {
 }
 
 const rows = [
-    createData('Edate(UNPAID)', "USA", "Gender = Man , AGE = 35 , City = Canoga Park , State = California Country = United States", "6.00", "BishopX","sada"),
+    createData('','','','','','',),
 ]
 
 const Accounts = props => {
@@ -29,9 +29,9 @@ const Accounts = props => {
 
         <Breadcrum title='Tools Requests'/>
 
-        <Card>
+        <Card sx={{ p: '22px' }}>
 
-            <CardHeader title="Accounts" />
+        <Typography sx={{ fontSize: '20px', fontWeight: '600' }} >Tools Requests</Typography>
             <CustomTextField
                 value={props.value}
                 placeholder='Search…'

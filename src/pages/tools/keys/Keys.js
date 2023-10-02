@@ -31,7 +31,7 @@ const Keys = props => {
             marginBottom: "34px",
             padding: "10px 0px"
          }}>
-            <CardHeader  title="Most Comman Tools"/>
+            <CardHeader  title="Most Comman Tools" sx={{ fontSize: '20px', fontWeight: '600' }}/>
         <Grid item xs={12} sm={6} md={6} xl={12} style={{ 
                 margin: "2px 20px"
              }}> 
@@ -46,7 +46,7 @@ const Keys = props => {
 
         <Card>
 
-            <CardHeader title="Keys" />
+            <CardHeader title="Keys" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             <div className='container'>
                 <Grid container spacing={12} className='demo-space-x' style={{ display: "flex", justifyContent: "center", padding: "30px 0" }}>

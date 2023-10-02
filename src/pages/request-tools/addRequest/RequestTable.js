@@ -178,7 +178,7 @@ const TableStickyHeader = () => {
       <Card sx={{
         p: "8px"
       }}>
-        <CardHeader title="Add Request & Tool Requests" />
+        <CardHeader title="Add Request & Tool Requests" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
         <Typography sx={{
           color: '#ea5455!important',
@@ -233,7 +233,7 @@ const TableStickyHeader = () => {
 
           <Grid item xs={12} lg={8} > 
           <Card>
-            <CardHeader title="Tools Requests"/> 
+            <CardHeader title="Tools Requests" sx={{ fontSize: '20px', fontWeight: '600' }}/> 
 
             <DataGrid
                 autoHeight

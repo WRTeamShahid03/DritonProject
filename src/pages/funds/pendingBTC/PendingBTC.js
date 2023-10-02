@@ -27,7 +27,7 @@ const  PendingBTC = props => {
 
         <Card>
 
-            <CardHeader title="Bitcoin Unconfirmed Deposits" />
+            <CardHeader title="Bitcoin Unconfirmed Deposits" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             
             <TableContainer component={Paper}>

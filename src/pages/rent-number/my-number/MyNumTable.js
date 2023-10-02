@@ -73,7 +73,7 @@ const MyNumTable = () => {
   return (
     <>
     <Card>
-        <CardHeader title="My Numbers"/>
+        <CardHeader title="My Numbers" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
    
       <TableContainer component={Paper} sx={{ maxHeight: 440 }}>

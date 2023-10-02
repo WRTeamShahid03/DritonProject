@@ -25,7 +25,7 @@ const rows = [
 const RentNumTable = () => {
     return (
         <Card> 
-            <CardHeader title="Rent Number"/> 
+            <CardHeader title="Rent Number" sx={{ fontSize: '20px', fontWeight: '600' }}/> 
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label='simple table'>
                 <TableHead>

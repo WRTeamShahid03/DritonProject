@@ -28,7 +28,7 @@ const Shipping = props => {
   
         <Card>
 
-            <CardHeader title="Shipping" />
+            <CardHeader title="Shipping" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             <div className='container'>
                 <Grid container spacing={12} className='demo-space-x' style={{ display: "flex", justifyContent: "center", padding: "30px 0" }}>

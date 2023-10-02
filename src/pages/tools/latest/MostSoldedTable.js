@@ -48,17 +48,8 @@ const data = [
 
 const MostSoldedTable = () => {
   return (
-    <Card>
-      <CardHeader
-        title='Most Solded'
-        subheader='TOOL TYPE'
-        action={
-          <OptionsMenu
-            options={['Last Week', 'Last Month', 'Last Year']}
-            iconButtonProps={{ size: 'small', sx: { color: 'text.disabled' } }}
-          />
-        }
-      />
+    <Card sx={{ p: '22px' }}>
+        <Typography sx={{ fontSize: '20px', fontWeight: '600' }} >Most Solded</Typography>
       <CardContent>
         {data.map((item, index) => {
           return (

@@ -25,7 +25,7 @@ const Notification = props => {
 
         <Card>
 
-            <CardHeader title="User Notification" />
+            <CardHeader title="User Notification" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             <CustomTextField
                 value={props.value}

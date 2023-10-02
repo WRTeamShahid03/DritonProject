@@ -20,8 +20,8 @@ const index = () => {
         <>
              <Breadcrum title="Purchase" />
 
-            <Card className="purchaseCard">
-                <CardHeader title='Purchased Tools' />
+            <Card className="purchaseCard" sx={{ p: '22px' }}>
+            <Typography sx={{ fontSize: '20px', fontWeight: '600' }} >Purchase Tools</Typography>
 
                 <Accordion sx={{ borderRadius: "5px", boxShadow: "0 6px 15px -7px rgba(234,84,85,.4)" }}>
                     <AccordionSummary

@@ -126,41 +126,29 @@ const UserDropdown = props => {
           </Box>
         </Box>
         <Divider sx={{ my: theme => `${theme.spacing(2)} !important` }} />
-        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/pages/user-profile/profile')}>
+        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/miscellaneous/profile/')}>
           <Box sx={styles}>
-            <Icon icon='tabler:user-check' />
+            <Icon icon='tabler:user' />
             My Profile
           </Box>
         </MenuItemStyled>
-        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/pages/account-settings/account')}>
+        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/miscellaneous/security/')}>
           <Box sx={styles}>
-            <Icon icon='tabler:settings' />
-            Settings
+            <Icon icon='tabler:shield' />
+            Security
           </Box>
         </MenuItemStyled>
-        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/pages/account-settings/billing')}>
+        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/terms-and-condition/')}>
           <Box sx={styles}>
-            <Icon icon='tabler:credit-card' />
-            Billing
+            <Icon icon='ph:book' />
+            Terms
           </Box>
         </MenuItemStyled>
         <Divider sx={{ my: theme => `${theme.spacing(2)} !important` }} />
-        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/pages/help-center')}>
+        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/miscellaneous/logs/')}>
           <Box sx={styles}>
-            <Icon icon='tabler:lifebuoy' />
-            Help
-          </Box>
-        </MenuItemStyled>
-        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/pages/faq')}>
-          <Box sx={styles}>
-            <Icon icon='tabler:info-circle' />
-            FAQ
-          </Box>
-        </MenuItemStyled>
-        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/pages/pricing')}>
-          <Box sx={styles}>
-            <Icon icon='tabler:currency-dollar' />
-            Pricing
+            <Icon icon='tabler:clock' />
+            Login Logs
           </Box>
         </MenuItemStyled>
         <Divider sx={{ my: theme => `${theme.spacing(2)} !important` }} />

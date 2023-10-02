@@ -27,7 +27,7 @@ const Logs = props => {
 
         <Card>
 
-            <CardHeader title="My Login Logs" />
+            <CardHeader title="My Login Logs" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             <CustomTextField
                 value={props.value}

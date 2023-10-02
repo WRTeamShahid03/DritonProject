@@ -31,7 +31,7 @@ const VpnTable = props => {
             marginBottom: "34px",
             padding: "10px 0px"
          }}>
-            <CardHeader  title="Most Comman Tools"/>
+            <CardHeader sx={{ fontSize: '20px', fontWeight: '600' }}  title="Most Comman Tools"/>
         <Grid item xs={12} sm={6} md={6} xl={12} style={{ 
                 margin: "2px 20px"
              }}> 
@@ -51,7 +51,7 @@ const VpnTable = props => {
 
         <Card>
 
-            <CardHeader title="VPN" />
+            <CardHeader title="VPN" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             <div className='container'>
                 <Grid container spacing={12} className='demo-space-x' style={{ display: "flex", justifyContent: "center", padding: "30px 0" }}>

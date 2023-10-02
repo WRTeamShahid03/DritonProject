@@ -6,7 +6,7 @@ import TableHead from '@mui/material/TableHead'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
-import { Button, Card, CardHeader, Grid,  MenuItem } from '@mui/material'
+import { Button, Card, CardHeader, Grid,  MenuItem, Typography } from '@mui/material'
 import CustomTextField from 'src/@core/components/mui/text-field'
 import { Box } from '@mui/system'
 import IconButton from '@mui/material/IconButton'
@@ -30,9 +30,9 @@ const Accounts = props => {
 
         <Breadcrum title='Tools Requests'/>
 
-        <Card>
+        <Card sx={{ p: '22px' }}>
 
-            <CardHeader title="Accounts" />
+        <Typography sx={{ fontSize: '20px', fontWeight: '600' }} >Accounts</Typography>
             <CustomTextField
                 value={props.value}
                 placeholder='Search…'

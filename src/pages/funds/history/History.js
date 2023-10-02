@@ -22,7 +22,7 @@ const  History = props => {
 
         <Card>
 
-            <CardHeader title="Billing History" />
+            <CardHeader title="Billing History" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             
             <TableContainer component={Paper}>

@@ -27,7 +27,7 @@ const  PendingCrypto = props => {
 
         <Card>
 
-            <CardHeader title="Other Crypto Payments" />
+            <CardHeader title="Other Crypto Payments" sx={{ fontSize: '20px', fontWeight: '600' }}/>
 
             
             <TableContainer component={Paper}>
