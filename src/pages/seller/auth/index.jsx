@@ -58,9 +58,6 @@ const index = () => {
         }
     };
     const handleSubmit2 = () => {
-        if (values2.password === '12345') {
-            toast.error('Enter the password correctly')
-        }
         if (values2.password === '' || values2.password === undefined) {
             toast.error('Enter the password correctly')
         }
@@ -165,7 +162,7 @@ const index = () => {
                                     type={confirmPassValues.showPassword ? 'text' : 'password'}
                                 />
                                 <hr style={{ color: 'grey', width: '100%' }} />
-                                <Button variant='contained' color='primary' onClick={handleSubmit2}>Submit</Button>
+                                <Button variant='contained' sx={{ mt: '-12px' }} color='primary' onClick={handleSubmit2}>Submit</Button>
                             </Grid>
 
 

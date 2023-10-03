@@ -13,6 +13,7 @@ import IconButton from '@mui/material/IconButton'
 
 import Icon from 'src/@core/components/icon'
 import Breadcrum from 'src/pages/components/Breadcrum'
+import Buy from '../BuyModal'
 
 const createData = (type, country, info, price, seller) => {
     return { type, country, info, price, seller }
@@ -93,7 +94,7 @@ const Accounts = props => {
                                     <Button variant='contained' color='success' size="small">Buy</Button>
                                 </TableCell>
                                 <TableCell align='left'>
-                                    <Button variant='contained' color='success' size="small">+</Button>
+                                    <Buy/>
                                 </TableCell>
                             </TableRow>
                         ))}

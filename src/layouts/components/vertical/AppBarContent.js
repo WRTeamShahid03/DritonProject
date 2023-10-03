@@ -16,6 +16,7 @@ import ShortcutsDropdown from 'src/@core/layouts/components/shared-components/Sh
 // ** Hook Import
 import { useAuth } from 'src/hooks/useAuth'
 
+
 const notifications = [
   {
     meta: 'Today',
@@ -63,53 +64,25 @@ const notifications = [
 
 const shortcuts = [
   {
-    title: 'Calendar',
-    url: '/apps/calendar',
-    icon: 'tabler:calendar',
-    subtitle: 'Appointments'
+    title: 'Telegram Channel',
+    url: 'https://t.me/joinchat/AAAAAESDaDYZsb7Kr7H1gA',
+    icon: 'tabler:bell',
   },
   {
-    title: 'Invoice App',
-    url: '/apps/invoice/list',
-    icon: 'tabler:file-invoice',
-    subtitle: 'Manage Accounts'
+    title: 'Deposit',
+    url: '/funds/deposit/',
+    icon: 'bx:dollar',
   },
   {
-    title: 'User App',
-    icon: 'tabler:users',
-    url: '/apps/user/list',
-    subtitle: 'Manage Users'
-  },
-  {
-    url: '/apps/roles',
-    icon: 'tabler:lock',
-    subtitle: 'Permissions',
-    title: 'Role Management'
-  },
-  {
-    subtitle: 'CRM',
-    title: 'Dashboard',
-    url: '/dashboards/crm',
-    icon: 'tabler:device-analytics'
+    title: 'Account Security',
+    icon: 'tabler:shield',
+    url: '/miscellaneous/security/',
   },
   {
     title: 'Settings',
     icon: 'tabler:settings',
-    subtitle: 'Account Settings',
-    url: '/pages/account-settings/account'
+    url: '/miscellaneous/profile/'
   },
-  {
-    icon: 'tabler:help',
-    title: 'Help Center',
-    url: '/pages/help-center',
-    subtitle: 'FAQs & Articles'
-  },
-  {
-    title: 'Dialogs',
-    icon: 'tabler:square',
-    subtitle: 'Useful Popups',
-    url: '/pages/dialog-examples'
-  }
 ]
 
 const AppBarContent = props => {
@@ -118,6 +91,7 @@ const AppBarContent = props => {
 
   // ** Hook
   const auth = useAuth()
+
 
   return (
     <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -129,7 +103,7 @@ const AppBarContent = props => {
         ) : null}
         {auth.user && <Autocomplete hidden={hidden} settings={settings} />}
       </Box>
-      <Box className='actions-right' sx={{ display: 'flex', alignItems: 'center' }}>
+      <Box className='actions-right' sx={{ display: 'flex', alignItems: 'center' }}>      
         <LanguageDropdown settings={settings} saveSettings={saveSettings} />
         <ModeToggler settings={settings} saveSettings={saveSettings} />
         {auth.user && (

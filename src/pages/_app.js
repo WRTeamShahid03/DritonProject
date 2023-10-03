@@ -58,6 +58,7 @@ import '../../styles/globals.css'
 
 // ** Custom css styles
 import '../../public/style/style.css'
+import '../../public/style/responsive.css'
 
 const clientSideEmotionCache = createEmotionCache()
 

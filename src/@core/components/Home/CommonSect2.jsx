@@ -10,12 +10,12 @@ const CommonSection2 = ({ cardTitle, subHead, cardText, sectionImg, icon }) => {
             </div>
 
             <div className="col-sm-12 col-md-12 col-lg-6">
-                <div class="card">
+                <div className="card">
                     <span className='card1Img'> {icon}</span>
-                    <div class="card-body">
-                        <h5 class="card-title">{cardTitle}</h5>
+                    <div className="card-body">
+                        <h5 className="card-title">{cardTitle}</h5>
                         <span className='subHead'>{subHead}</span>
-                        <p class="card-text">{cardText}</p>
+                        <p className="card-text">{cardText}</p>
                     </div>
                 </div>
             </div>

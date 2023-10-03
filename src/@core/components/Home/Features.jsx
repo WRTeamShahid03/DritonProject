@@ -74,28 +74,28 @@ const Features = () => {
                             <p className='commom_p_tags'>Explore the features of Strongtools</p>
                         </div>
                         <div className="col-sm-12 col-md-12 col-lg-4" >
-                            <div class="card card1">
+                            <div className="card card1">
                                 <span className='card1Img'><BsCheck color='white' size={50} /></span>
-                                <div class="card-body">
-                                    <h5 class="card-title">{cardData[0].title}</h5>
-                                    <p class="card-text">{cardData[0].desc}</p>
+                                <div className="card-body">
+                                    <h5 className="card-title">{cardData[0].title}</h5>
+                                    <p className="card-text">{cardData[0].desc}</p>
                                     <div className="row">
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[0].btn1}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[0].btn2}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[0].btn3}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[0].btn4}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[0].btn5}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[0].btn6}</span>
                                         </div>
 
@@ -106,28 +106,28 @@ const Features = () => {
                         </div>
 
                         <div className="col-sm-12 col-md-12 col-lg-4" >
-                            <div class="card card1">
+                            <div className="card card1">
                                 <span className='card1Img'><FaTools color='white' size={30} /></span>
-                                <div class="card-body">
-                                    <h5 class="card-title">{cardData[1].title}</h5>
-                                    <p class="card-text">{cardData[1].desc}</p>
+                                <div className="card-body">
+                                    <h5 className="card-title">{cardData[1].title}</h5>
+                                    <p className="card-text">{cardData[1].desc}</p>
                                     <div className="row">
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[1].btn1}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[1].btn2}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[1].btn3}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[1].btn4}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[1].btn5}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[1].btn6}</span>
                                         </div>
 
@@ -138,28 +138,28 @@ const Features = () => {
                         </div>
 
                         <div className="col-sm-12 col-md-12 col-lg-4" >
-                            <div class="card card1">
+                            <div className="card card1">
                                 <span className='card1Img'><FaBuildingColumns color='white' size={30} /></span>
-                                <div class="card-body">
-                                    <h5 class="card-title">{cardData[2].title}</h5>
-                                    <p class="card-text">{cardData[2].desc}</p>
+                                <div className="card-body">
+                                    <h5 className="card-title">{cardData[2].title}</h5>
+                                    <p className="card-text">{cardData[2].desc}</p>
                                     <div className="row">
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[2].btn1}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[2].btn2}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[2].btn3}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[2].btn4}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[2].btn5}</span>
                                         </div>
-                                        <div className="col-sm-12 col-md-12 col-lg-6">
+                                        <div className="col-6 col-sm-6 col-md-6 col-lg-6">
                                             <span className='cardBtn'>{cardData[2].btn6}</span>
                                         </div>
 
@@ -171,12 +171,12 @@ const Features = () => {
 
                         {
                             card2Data.map((e) => {
-                                return <div className="col-sm-12 col-md-12 col-lg-4" >
-                                    <div class="card card1">
+                                return <div className="col-sm-12 col-md-6 col-lg-4" key={e.id}>
+                                    <div className="card card1">
                                         <span className='card1Img'>{e.icon}</span>
-                                        <div class="card-body">
-                                            <h5 class="card-title">{e.title}</h5>
-                                            <p class="card-text">{e.desc}</p>
+                                        <div className="card-body">
+                                            <h5 className="card-title">{e.title}</h5>
+                                            <p className="card-text">{e.desc}</p>
                                         </div>
                                     </div>
                                 </div>

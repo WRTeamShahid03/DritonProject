@@ -44,7 +44,8 @@ const index = () => {
             >
               <Box sx={{ mr: 2, display: 'flex', flexDirection: 'column', alignItems: "center", justifyContent: 'center', }}>
 
-                <Typography variant='h5' sx={{ fontFamily: "inherit", fontWeight: "500", color: '#5e5873', fontSize: "1.5rem" }}>harishdev</Typography>
+                <Typography variant='h5' sx={{ fontFamily: "inherit", fontWeight: "500", color: '#5e5873', fontSize: "1.5rem" }}>Croatia
+</Typography>
               </Box>
             </Box>
 

@@ -12,6 +12,7 @@ import { Box } from '@mui/system'
 import IconButton from '@mui/material/IconButton'
 
 import Icon from 'src/@core/components/icon'
+import BuyModal from '../BuyModal'
 
 const createData = (type, country, info, price, seller) => {
     return { type, country, info, price, seller }
@@ -142,7 +143,7 @@ const Others = props => {
                                     <Button variant='contained' color='success' size="small">Buy</Button>
                                 </TableCell>
                                 <TableCell align='left'>
-                                    <Button variant='contained' color='success' size="small">+</Button>
+                                <BuyModal/>
                                 </TableCell>
                             </TableRow>
                         ))}

@@ -13,6 +13,7 @@ import Divider from '@mui/material/Divider'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import MenuItem from '@mui/material/MenuItem'
+import { Button } from '@mui/material'
 
 // ** Icon Imports
 import Icon from 'src/@core/components/icon'
@@ -130,6 +131,12 @@ const UserDropdown = props => {
           <Box sx={styles}>
             <Icon icon='tabler:user' />
             My Profile
+          </Box>
+        </MenuItemStyled>
+        <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/miscellaneous/profile/')}>
+          <Box sx={styles}>
+            <Icon icon='bx:dollar' />
+            Balance : 0.00
           </Box>
         </MenuItemStyled>
         <MenuItemStyled sx={{ p: 0 }} onClick={() => handleDropdownClose('/miscellaneous/security/')}>

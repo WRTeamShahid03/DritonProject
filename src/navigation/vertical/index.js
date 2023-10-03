@@ -249,7 +249,7 @@ const navigation = () => {
         title: 'Seller',
         icon: 'ph:user-plus-bold',
         badgeColor: 'error',
-        path: '/seller/dashboard'
+        path: '/seller/auth'
         },
     
       ]

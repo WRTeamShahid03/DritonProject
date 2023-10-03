@@ -1,0 +1,331 @@
+@media screen and (max-width: 1200px) {
+    .navbar-expand-lg {
+        margin-left: -106px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+
+    #hamburg {
+        display: block;
+        margin-right: 12px;
+        margin-left: -53px;
+    }
+
+    #header .navFlex {
+        display: none !important;
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+    header .row .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
+    header .row .col-sm-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+        overflow-x: visible;
+    }
+
+    header .navLogo {
+        position: absolute;
+        top: 16px;
+    }
+
+    header .logo img {
+        width: 22px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    #features .card1 .card-text {
+        height: 64px;
+    }
+
+    #about .card .card1Img {
+        padding: 0px 0px 0px 20px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    #features .card1 .card-text {
+        height: 80px;
+    }
+
+    #about .card .card1Img {
+        padding: 0px 0px 0px 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    #heroSect .heroBg {
+        display: none;
+    }
+
+    #features .card1 .card-text {
+        height: 80px;
+    }
+
+    #about .card .card1Img {
+        margin-top: -60px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    .common_h_tags {
+        margin-top: -22px;
+    }
+
+    #homeFooter {
+        margin-top: 50px;
+        height: 68px;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width: 767px) {
+
+    #heroSect {
+        padding: 34px 0px;
+        padding-top: 90px;
+    }
+
+    #heroSect .heroBg {
+        display: none;
+    }
+
+    #heroSect .heroWrap .heroHeadline h1 {
+        font-size: 50px;
+    }
+
+    #heroSect .heroWrap .heroDesc {
+        margin-top: -36px;
+    }
+
+    #features .card1 .card-text {
+        height: 80px;
+    }
+
+    #about .card .card1Img {
+        margin-top: -60px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    #about .common_h_tags {
+        margin-top: -66px;
+    }
+
+    .common_h_tags {
+        margin-top: -22px;
+    }
+
+    #homeFooter {
+        margin-top: 50px;
+        height: 68px;
+    }
+
+    #contact .contactBtns .cBtn {
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 574px) {
+
+    #heroSect {
+        padding: 22px 0px;
+        padding-top: 80px;
+    }
+
+    #heroSect .heroBg {
+        display: none;
+    }
+
+    #heroSect .heroWrap .heroHeadline h1 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    #heroSect .heroWrap .heroDesc {
+        font-size: 20px;
+    }
+
+    #heroSect .heroWrap .heroDesc {
+        margin-top: -36px;
+    }
+
+    #features .card1 .card-text {
+        height: auto;
+    }
+
+    #about .card .card1Img {
+        margin-top: -60px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    #about .aboutImg {
+        margin-top: -40px;
+    }
+
+    #about .aboutImg,
+    #about .commonSect2 .aboutImg {
+        margin-top: -40px;
+        margin-left: 40px;
+    }
+
+    #about .common_h_tags {
+        margin-top: -66px;
+
+    }
+
+    .common_h_tags {
+        margin-top: -22px;
+        font-size: 40px;
+    }
+
+    .commom_p_tags {
+        font-size: 25px;
+        margin-top: 22px;
+    }
+
+
+    #homeFooter {
+        margin-top: 50px;
+        height: 68px;
+    }
+
+    #contact .contactBtns .cBtn {
+        padding: 16px;
+    }
+
+    #payments .card {
+        margin-top: 20px;
+    }
+
+    #contact {
+        margin-top: 60px;
+        padding: 70px 12px;
+    }
+
+    #contact .contactHeading {
+        align-items: flex-start;
+    }
+
+    #contact .contactHeading .commom_p_tags {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+
+    #heroSect {
+        padding: 22px 0px;
+        padding-top: 80px;
+    }
+
+    #heroSect .heroBg {
+        display: none;
+    }
+
+    #heroSect .heroWrap .heroHeadline h1 {
+        font-size: 30px;
+        line-height: 46px;
+    }
+
+    #heroSect .heroWrap .heroDesc {
+        font-size: 20px;
+    }
+
+    #heroSect .heroWrap .heroDesc {
+        margin-top: -36px;
+    }
+
+    #features .card1 .card-text {
+        height: auto;
+    }
+
+    #about .card .card1Img {
+        margin-top: -60px;
+        padding: 0px 0px 0px 20px;
+    }
+
+    #about .aboutImg {
+        margin-top: -40px;
+    }
+
+    #about .aboutImg,
+    #about .commonSect2 .aboutImg {
+        margin-top: -40px;
+        margin-left: 30px;
+    }
+
+    #about .card {
+        padding: 0px;
+        margin-left: -10px;
+    }
+
+    #about .card .card-title {
+        font-size: 36px;
+    }
+    #about .card .subHead {
+        font-size: 22px;
+    }
+    #about .card .card-text {
+        font-size: 16px;
+    }
+    #platform .platFormDiv .heading {
+        font-size: 30px;
+    }
+
+    #about .common_h_tags {
+        margin-top: -66px;
+
+    }
+
+    .common_h_tags {
+        margin-top: -22px;
+        font-size: 32px;
+    }
+
+    .commom_p_tags {
+        font-size: 20px;
+        margin-top: 22px;
+    }
+
+    #contact .contactBtns .cBtn {
+        padding: 16px;
+    }
+
+    #payments .card {
+        margin-top: 20px;
+    }
+
+    #contact {
+        margin-top: 60px;
+        padding: 70px 4px;
+    }
+
+    #contact .contactHeading {
+        align-items: flex-start;
+    }
+    #contact .contactBtns {
+        flex-direction: column;
+    }
+
+    #contact .contactHeading .common_h_tags {
+        font-size: 36px;
+    }
+
+    #contact .contactHeading .commom_p_tags {
+        font-size: 18px;
+    }
+    #homeFooter {
+        margin-top: 30px;
+        height: 52px;
+    }
+}

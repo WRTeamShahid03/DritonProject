@@ -77,12 +77,12 @@ const Payments = () => {
                     </div>
                     {
                         cardData.map((e) => {
-                            return <div className="col-sm-12 col-md-12 col-lg-4">
+                            return <div className="col-sm-6 col-md-6 col-lg-4" key={e.id}>
                                 <div className="card">
-                                    <img class="card-img-top" src={e.icon.src} alt="Card image cap" />
-                                    <div class="card-body">
-                                        <h5 class="card-title">{e.title}</h5>
-                                        <p class="card-text">{e.desc}</p>
+                                    <img className="card-img-top" src={e.icon.src} alt="Card image cap" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{e.title}</h5>
+                                        <p className="card-text">{e.desc}</p>
                                     </div>
                                 </div>
                             </div>

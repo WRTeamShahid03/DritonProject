@@ -77,10 +77,17 @@ header {
     height: 80px;
     background-color: #1c1d26;
     padding: 18px 0px;
-    position: sticky;
-    top: 0;
     z-index: 99;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
+
+header.sticky {
+    background-color: #1c1d26;
+}
+
 
 header .row {
     align-items: center;
@@ -114,6 +121,7 @@ header .logo img {
 
 #hamburg {
     display: none;
+    color: white;
 }
 
 header .navFlex {
@@ -131,13 +139,16 @@ header .nav-link:hover {
     color: #864bfa;
 }
 
-header .btns {
+header .btns,
+.offcanvas-body .btns {
     display: flex;
     gap: 12px;
 }
 
 header .btns .register,
-header .btns .login {
+header .btns .login,
+.offcanvas-body .btns .register,
+.offcanvas-body .btns .login {
     padding: 8px 20px;
     border-radius: 8px;
     background-color: #9647fe;
@@ -149,8 +160,44 @@ header .btns .login {
 }
 
 header .btns .register:hover,
-header .btns .login:hover {
+header .btns .login:hover,
+.offcanvas-body .btn .register,
+.offcanvas-body .btn .login {
     background-color: #6230a3;
+}
+
+
+.offcanvas-header {
+    background: #21232e !important;
+    color: white !important;
+}
+
+.offcanvas-header .btn-close {
+    background-color: white;
+}
+
+.offcanvas-body {
+    background: #21232e;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    font-size: 18px;
+}
+
+.offcanvas.offcanvas-end {
+    width: 80% !important;
+}
+
+.offcanvas-body .navFlex {
+    flex-direction: column;
+}
+
+.offcanvas-body .nav-link {
+    color: white !important;
+}
+
+.offcanvas-body .btns {
+    margin-top: 12px;
 }
 
 /* header ends  */
@@ -159,6 +206,7 @@ header .btns .login:hover {
     background-color: #1c1d26;
     padding: 52px 0px;
     font-family: Roboto;
+    padding-top: 122px;
 }
 
 #heroSect .heroWrap {
@@ -517,32 +565,37 @@ header .btns .login:hover {
     box-shadow: 4px 4px 0 #3247a5;
 }
 
-#contact .contactBtns .rgBtn:hover{
+#contact .contactBtns .rgBtn:hover {
     background-color: #6230a3;
 }
-#contact .contactBtns .tlBtn:hover{
+
+#contact .contactBtns .tlBtn:hover {
     background-color: #3247a5;
 }
 
-#contact .contactBtns .cBtn svg{
+#contact .contactBtns .cBtn svg {
     margin-bottom: 5px;
     margin-left: 12px;
 }
 
-#homeFooter{
-    margin-top: 100px;
-    color: white;
-    font-family: Roboto;
-    height: 100px;
+#contact a{
+    text-decoration: none;
 }
 
-#homeFooter .footerDiv{
+#homeFooter {
+    margin-top: 60px;
+    color: white;
+    font-family: Roboto;
+    height: 66px;
+}
+
+#homeFooter .footerDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#homeFooter .footerDiv span{
+#homeFooter .footerDiv span {
     font-size: 18px;
     font-weight: 100;
 }
@@ -550,6 +603,5 @@ header .btns .login:hover {
 #homeFooter .footerDiv span svg {
     margin-left: 10px;
 }
+
 /* Home ends  */
-
-

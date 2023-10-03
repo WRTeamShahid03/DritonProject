@@ -113,7 +113,7 @@ const ShortcutsDropdown = props => {
               '& svg': { color: 'text.secondary' }
             }}
           >
-            <Typography variant='h5'>Shortcuts</Typography>
+            <Typography variant='h5'>Shortcutsss</Typography>
             <Tooltip title='Add Shortcut' placement='top'>
               <IconButton size='small'>
                 <Icon fontSize='1.5rem' icon='tabler:apps' />
@@ -158,9 +158,6 @@ const ShortcutsDropdown = props => {
                     <Icon fontSize='1.5rem' icon={shortcut.icon} />
                   </Avatar>
                   <Typography sx={{ fontWeight: 500, color: 'text.secondary' }}>{shortcut.title}</Typography>
-                  <Typography variant='body2' sx={{ color: 'text.disabled' }}>
-                    {shortcut.subtitle}
-                  </Typography>
                 </Box>
               </Grid>
             ))}

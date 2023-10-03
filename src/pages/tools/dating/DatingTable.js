@@ -13,6 +13,7 @@ import IconButton from '@mui/material/IconButton'
 
 import Icon from 'src/@core/components/icon'
 import Link from 'next/link'
+import Buy from '../BuyModal'
 
 const createData = (type, country, info, price, seller) => {
     return { type, country, info, price, seller }
@@ -148,7 +149,7 @@ const DatingTable = props => {
                                     <Button variant='contained' color='success' size="small">Buy</Button>
                                 </TableCell>
                                 <TableCell align='left'>
-                                    <Button variant='contained' color='success' size="small">+</Button>
+                                <Buy/>
                                 </TableCell>
                             </TableRow>
                         ))}
