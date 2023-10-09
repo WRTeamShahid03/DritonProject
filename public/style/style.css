@@ -83,7 +83,9 @@ header {
     width: 100%;
     transition: background-color 0.3s ease;
 }
-
+.active{
+    color: red !important;
+}
 header.sticky {
     background-color: #1c1d26;
 }
