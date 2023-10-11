@@ -2,6 +2,10 @@ import React from 'react'
 import { Button, Card, Grid, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import medalImg from '../../../@core/Assets/Images/badge.svg'
+import ReactApexcharts from 'src/@core/components/react-apexcharts'
+import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
+import { useTheme } from '@mui/material/styles'
+
 
 import ViewInArIcon from '@mui/icons-material/ViewInAr';
 import DoneIcon from '@mui/icons-material/Done';
@@ -20,7 +24,64 @@ import InformationModal from '../InformationModal';
 import Breadcrum from 'src/pages/components/Breadcrum';
 
 
-const index = () => {
+const Index = () => {
+
+  const theme = useTheme()
+  const options = {
+    chart: {
+      sparkline: { enabled: true }
+    },
+    stroke: { lineCap: 'round' },
+    colors: [hexToRGBA(theme.palette.warning.main, 1)],
+    states: {
+      hover: {
+        filter: { type: 'none' }
+      },
+      active: {
+        filter: { type: 'none' }
+      }
+    },
+    plotOptions: {
+      radialBar: {
+        endAngle: 150,
+        startAngle: -150,
+        hollow: { size: '74%' },
+        track: {
+          strokeWidth: '84%',
+          background: hexToRGBA(theme.palette.customColors.trackBg, 1)
+        },
+        dataLabels: {
+          name: { show: false },
+          value: {
+            offsetY: 3,
+            fontWeight: 600,
+            color: theme.palette.text.primary,
+            fontFamily: theme.typography.fontFamily,
+            fontSize: '28px'
+          }
+        }
+      }
+    },
+    grid: {
+      padding: {
+        bottom: 15
+      }
+    },
+    responsive: [
+      {
+        breakpoint: theme.breakpoints.values.lg,
+        options: {
+          chart: { height: 199 }
+        }
+      },
+      {
+        breakpoint: 430,
+        options: {
+          chart: { height: 150 }
+        }
+      }
+    ]
+  }
   return (
     <>
       <Breadcrum  title='Seller Dashboard' />
@@ -252,8 +313,9 @@ const index = () => {
               <InformationModal info='This will show you how much you earned and how much you need to reach 1K$ to get bonus.' />
             </Box>
 
-            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', border: '5px solid lightgray', borderRadius: '50%', padding: '32px 12px',width: '210px',height: '136px', m: 'auto',mt: '48px'}}>
-              <Typography sx={{ fontSize: '40px', fontWeight: '100' }}>0%</Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px 12px',width: '210px',height: '136px', m: 'auto',mt: '48px'}}>
+              {/* <Typography sx={{ fontSize: '40px', fontWeight: '100' }}>0%</Typography> */}
+              <ReactApexcharts type='radialBar' height={200} series={[0]} options={options} />
             </Box>
 
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around', borderTop: '1px solid lightgray', mt: '50px' }}>
@@ -448,4 +510,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

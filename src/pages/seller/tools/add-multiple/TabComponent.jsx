@@ -14,7 +14,6 @@ const TabComponent = ({ title }) => {
                     <Box>
                         <form onSubmit={e => e.preventDefault()}>
                             <Grid container spacing={5}>
-                                <Typography sx={{ ml: '22px' }}>{title.toUpperCase()} TAB </Typography>
                                 <Grid item xs={12} lg={12}>
                                     <CustomTextField
                                         fullWidth

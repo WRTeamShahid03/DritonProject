@@ -3,7 +3,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 import Breadcrum from 'src/pages/components/Breadcrum'
 
-const index = () => {
+const Index = () => {
     return (
         <>
             <Breadcrum title='Telegram' />
@@ -26,4 +26,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

@@ -1,28 +1,15 @@
 import React from 'react'
-import Typography from '@mui/material/Typography';
-import { Breadcrumbs, Link } from '@mui/material'
 import History from './History';
+import Breadcrum from 'src/pages/components/Breadcrum';
 
-const index = () => {
+const Index = () => {
   return (
     <>
-      <Breadcrumbs aria-label="breadcrumb">
-                <Link underline="hover" color="inherit" href="/">
-                Deposit History
-
-                </Link>
-                <Link
-                    underline="hover"
-                    color="inherit"
-                    href="/material-ui/getting-started/installation/"
-                >
-                </Link>
-                <Typography color="text.primary"></Typography>
-            </Breadcrumbs>
+      <Breadcrum title={'Deposit History'}/>
 
         <History />
     </>
   )
 }
 
-export default index
+export default Index

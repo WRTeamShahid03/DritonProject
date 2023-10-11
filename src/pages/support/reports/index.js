@@ -1,7 +1,7 @@
 import React from 'react'
 import Report from './Report'
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <Report/>
@@ -9,4 +9,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

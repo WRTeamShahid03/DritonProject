@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import Notification from './Notification';
 import Breadcrum from 'src/pages/components/Breadcrum';
 
-const index = () => {
+const Index = () => {
   return (
     <>
 
@@ -17,4 +17,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

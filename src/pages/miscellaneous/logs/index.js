@@ -2,7 +2,7 @@ import React from 'react'
 import Logs from './Logs';
 import Breadcrum from 'src/pages/components/Breadcrum';
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <Breadcrum title="Login Logs"/>
@@ -12,4 +12,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

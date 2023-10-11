@@ -6,7 +6,7 @@ import { Box } from '@mui/system'
 import { TabContext, TabList, TabPanel } from '@mui/lab'
 import CustomTextField from 'src/@core/components/mui/text-field'
 
-const index = () => {
+const Index = () => {
 
   const [value, setValue] = useState('1')
 
@@ -109,4 +109,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

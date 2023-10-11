@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import Breadcrum from '../components/Breadcrum'
 
-const index = () => {
+const Index = () => {
     return (
         <>
             <Breadcrum title="Terms & Rules"/>
@@ -141,4 +141,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

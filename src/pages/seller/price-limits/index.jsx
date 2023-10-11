@@ -44,7 +44,7 @@ const TabList = styled(MuiTabList)(({ theme }) => ({
   }
 }))
 
-const index = () => {
+const Index = () => {
   // ** State
   const [value, setValue] = useState('1')
 
@@ -92,4 +92,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

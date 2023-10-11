@@ -1,12 +1,12 @@
 import React from 'react'
-import MyNumber from './OrderRdp'
+import OrderRdp from './OrderRdp'
 
-const index = () => {
+const Index = () => {
   return (
     <>
-    <MyNumber/>
+    <OrderRdp/>
     </>
   )
 }
 
-export default index
+export default Index

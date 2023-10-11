@@ -1,23 +1,12 @@
 import React from 'react'
 import Card from '@mui/material/Card';
-import Typography from '@mui/material/Typography';
-import { Breadcrumbs, Link } from '@mui/material'
 import PendingBTC from './PendingBTC';
+import Breadcrum from 'src/pages/components/Breadcrum';
 
-const index = () => {
+const Index = () => {
   return (
     <>
-      <Breadcrumbs aria-label="breadcrumb">
-                <Link  color="inherit" href="/">
-                Deposit Pending
-                </Link>
-                <Link
-                    color="inherit"
-                    href="/material-ui/getting-started/installation/"
-                >
-                </Link>
-                <Typography color="text.primary"></Typography>
-            </Breadcrumbs>
+      <Breadcrum title='Deposit Pending'/>
 
       <Card >
         <PendingBTC />
@@ -27,4 +16,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

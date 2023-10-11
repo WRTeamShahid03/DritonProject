@@ -26,7 +26,7 @@ const data = [
     },
 ]
 
-const index = () => {
+const Index = () => {
 
     const initialSelected = data.filter(item => item.isSelected)[data.filter(item => item.isSelected).length - 1].value
 
@@ -157,4 +157,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

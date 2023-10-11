@@ -3,7 +3,7 @@ import React from 'react'
 import Breadcrum from 'src/pages/components/Breadcrum'
 
 
-const index = () => {
+const Index = () => {
     return (
         <>
             <Breadcrum title="POF Verification" />
@@ -29,4 +29,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

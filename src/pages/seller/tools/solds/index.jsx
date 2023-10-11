@@ -60,7 +60,7 @@ const rows = [
   // createData('123','unpaid','India', 'abc','$4','11-8-2023'),
 ]
 
-const index = props => {
+const Index = props => {
   // ** States
   const [page, setPage] = useState(0)
   const [rowsPerPage, setRowsPerPage] = useState(10)
@@ -171,4 +171,4 @@ const index = props => {
   )
 }
 
-export default index
+export default Index

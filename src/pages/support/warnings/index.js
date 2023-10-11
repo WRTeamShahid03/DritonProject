@@ -1,7 +1,7 @@
 import React from 'react'
 import Warnings from './Warnings'
 
-const index = () => {
+const Index = () => {
   return (
     <>
     <Warnings/>
@@ -9,4 +9,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

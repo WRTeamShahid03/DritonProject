@@ -17,7 +17,7 @@ const rows = [
     createData('', '', '', '', ''),
 ]
 
-const index = () => {
+const Index = () => {
     return (
         <>
         <Breadcrum title='Manage Tools' />
@@ -57,4 +57,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

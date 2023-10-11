@@ -4,7 +4,7 @@ import { Breadcrumbs, Button, Typography } from '@mui/material'
 import Link from 'next/link'
 import FAQsModal from '../FAQsModal'
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <Breadcrumbs aria-label="breadcrumb" sx={{
@@ -21,4 +21,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

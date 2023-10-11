@@ -12,7 +12,8 @@ import CustomTextField from 'src/@core/components/mui/text-field'
 // ** MUI Imports
 import Box from '@mui/material/Box'
 import { DataGrid } from '@mui/x-data-grid'
-import {viewRow} from './staticData'
+// import viewRow from './staticData'
+import { viewRow } from 'src/@core/components/staticData'
 
 // ** Custom Component Import
 import QuickSearchToolbar from './Search'

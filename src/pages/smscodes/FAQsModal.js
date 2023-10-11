@@ -112,7 +112,7 @@ const FAQsModal = () => {
                     <Grid container spacing={6}>
                         {
                             accordianData.map((e)=>{
-                                return <Accordion sx={{ width: "100%" }}>
+                                return <Accordion sx={{ width: "100%" }} key={e.id}>
                                 <AccordionSummary
                                     id='panel-header-1'
                                     aria-controls='panel-content-1'

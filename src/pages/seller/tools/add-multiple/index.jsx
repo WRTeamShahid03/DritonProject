@@ -12,11 +12,12 @@ import TabContext from '@mui/lab/TabContext'
 import TabComponent from './TabComponent'
 import RightSide from './RightSide'
 
-const index = () => {
+const Index = () => {
     // ** State
     const [value, setValue] = useState('2')
 
     const [accountTabs, setAccountTabs] = useState('dating')
+    const [showAccTab, setShowAccTab] = useState(false)
 
 
     // functions to set tab values of accounts tab ||
@@ -62,6 +63,15 @@ const index = () => {
         setValue(newValue)
     }
 
+    const handleAccTab = (e) => {
+        e.preventDefault()
+        setShowAccTab(true)
+    }
+    const handleOthersTab = (e) => {
+        e.preventDefault()
+        setShowAccTab(false)
+    }
+
     return (
         <>
             <Box id='addMultiple'>
@@ -80,31 +90,6 @@ const index = () => {
                                     <Typography sx={{ fontSize: '16px', background: 'rgba(234,84,85,.12)', color: '#ea5455', p: '8px', borderRadius: '8px', mt: '12px' }}>ADDING EMAIL PASS - COMBO List is 100% Forbidden otherwise you will get banned Permanently.</Typography>
 
                                     <TabContext value={value}>
-
-                                        <TabPanel value='1'>
-                                            <Box>
-                                                <TabContext value={value} className='addMultiTabsAcc'>
-                                                    <TabList onChange={handleChange} aria-label='nav tabs example' sx={{ borderBottom: 'none !important' }}>
-                                                        <Tab value='dating' component='a' label='Dating' href='/spam' onClick={e => dating(e)} icon={<Icon icon='solar:heart-outline' />} />
-                                                        <Tab value='vpn' component='a' label='VPN' href='/spam' onClick={e => vpn(e)} icon={<Icon icon='iconamoon:shield-light' />} />
-                                                        <Tab value='shopping' component='a' label='Shopping' href='/spam' onClick={e => shopping(e)} icon={<Icon icon='mdi:shopping-outline' />} />
-                                                        <Tab value='shipping' component='a' label='Shipping' href='/spam' onClick={e => shipping(e)} icon={<Icon icon='mingcute:truck-line' />} />
-
-                                                    </TabList>
-
-                                                    <TabList onChange={handleChange} aria-label='nav tabs example' sx={{ borderBottom: 'none !important', mt: '12px' }}>
-                                                        <Tab value='streaming' component='a' label='Streaming' href='/spam' onClick={e => streaming(e)} icon={<Icon icon='material-symbols:cast-outline' />} />
-                                                        <Tab value='food' component='a' label='Food' href='/spam' onClick={e => food(e)} icon={<Icon icon='et:piechart' />} />
-                                                        <Tab value='keys' component='a' label='Keys' href='/spam' onClick={e => keys(e)} icon={<Icon icon='icon-park-outline:key' />} />
-                                                        <Tab value='others' component='a' label='Others' href='/spam' onClick={e => others(e)} icon={<Icon icon='ion:grid-outline' />} />
-                                                        <Tab value='social' component='a' label='Social Network' href='/spam' onClick={e => social(e)} icon={<Icon icon='akar-icons:instagram-fill' />} />
-
-                                                    </TabList>
-
-
-                                                </TabContext>
-                                            </Box>
-                                        </TabPanel>
 
                                         <TabPanel value='2'>
                                             <Grid container spacing={6} >
@@ -250,12 +235,35 @@ const index = () => {
                                         </TabPanel>
 
                                         <TabList centered onChange={handleChange} aria-label='nav tabs example'>
-                                            <Tab value='1' component='a' label='Accounts' href='/drafts' onClick={e => e.preventDefault()} icon={<Icon icon='tabler:user' />} />
-                                            <Tab value='2' component='a' label='Stuffs' href='/trash' onClick={e => e.preventDefault()} icon={<Icon icon='lucide:server' />} />
-                                            <Tab value='3' component='a' label='Tutorials' href='/spam' onClick={e => e.preventDefault()} icon={<Icon icon='ri:youtube-line' />} />
-                                            <Tab value='4' component='a' label='RDPs' href='/spam' onClick={e => e.preventDefault()} icon={<Icon icon='eva:monitor-outline' />} />
+                                            <Tab value='dating' component='a' label='Accounts' onClick={handleAccTab} icon={<Icon icon='tabler:user' />} />
+                                            <Tab value='2' component='a' label='Stuffs'  onClick={handleOthersTab} icon={<Icon icon='lucide:server' />} />
+                                            <Tab value='3' component='a' label='Tutorials' onClick={handleOthersTab} icon={<Icon icon='ri:youtube-line' />} />
+                                            <Tab value='4' component='a' label='RDPs' onClick={handleOthersTab} icon={<Icon icon='eva:monitor-outline' />} />
                                         </TabList>
                                     </TabContext>
+
+                                    {
+                                        showAccTab?<TabContext value={value} className='addMultiTabsAcc'>
+                                        <TabList onChange={handleChange} aria-label='nav tabs example' sx={{ borderBottom: 'none !important' }}>
+                                            <Tab value='dating' component='a' label='Dating' onClick={e => dating(e)} icon={<Icon icon='solar:heart-outline' />} />
+                                            <Tab value='vpn' component='a' label='VPN' onClick={e => vpn(e)} icon={<Icon icon='iconamoon:shield-light' />} />
+                                            <Tab value='shopping' component='a' label='Shopping' onClick={e => shopping(e)} icon={<Icon icon='mdi:shopping-outline' />} />
+                                            <Tab value='shipping' component='a' label='Shipping' onClick={e => shipping(e)} icon={<Icon icon='mingcute:truck-line' />} />
+
+                                        </TabList>
+
+                                        <TabList onChange={handleChange} aria-label='nav tabs example' sx={{ borderBottom: 'none !important', mt: '12px' }}>
+                                            <Tab value='streaming' component='a' label='Streaming' onClick={e => streaming(e)} icon={<Icon icon='material-symbols:cast-outline' />} />
+                                            <Tab value='food' component='a' label='Food' onClick={e => food(e)} icon={<Icon icon='et:piechart' />} />
+                                            <Tab value='keys' component='a' label='Keys' onClick={e => keys(e)} icon={<Icon icon='icon-park-outline:key' />} />
+                                            <Tab value='others' component='a' label='Others' onClick={e => others(e)} icon={<Icon icon='ion:grid-outline' />} />
+                                            <Tab value='social' component='a' label='Social Network' onClick={e => social(e)} icon={<Icon icon='akar-icons:instagram-fill' />} />
+
+                                        </TabList>
+
+
+                                    </TabContext>: ''
+                                    }
 
                                 </Box>
                             </Grid>
@@ -276,4 +284,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

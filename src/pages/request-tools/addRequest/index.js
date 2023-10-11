@@ -1,7 +1,7 @@
 import React from 'react'
 import RentNumber from './AddRequest'
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <RentNumber/>
@@ -9,4 +9,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

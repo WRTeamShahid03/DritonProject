@@ -1,8 +1,9 @@
 'use client'
 import React from 'react'
+import { Toaster } from 'react-hot-toast'
 import Home from 'src/@core/components/Home/Home'
 
-const index = () => {
+const Index = () => {
   return (
     <>
       <Toaster
@@ -14,4 +15,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

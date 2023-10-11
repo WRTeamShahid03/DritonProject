@@ -1,7 +1,7 @@
 import React from 'react'
 import MyNumber from './MyNumber'
 
-const index = () => {
+const Index = () => {
   return (
     <>
     <MyNumber/>
@@ -9,4 +9,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

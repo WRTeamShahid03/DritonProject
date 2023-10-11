@@ -11,7 +11,7 @@ import { toast } from 'react-hot-toast';
 // import Icon from 'src/@core/components/icon'
 
 
-const index = () => {
+const Index = () => {
 
     const router = useRouter();
 
@@ -181,4 +181,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

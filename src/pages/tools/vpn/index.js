@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import VpnTable from './VpnTable'
+import BuyModal from '../BuyModal'
 
-const index = () => {
+const Index = () => {
+  const [cartItems, setCartItems] = useState([]);
+  const [showCart, setShowCart] = useState(false)
+
+  const addToCart = (item) => {
+    setShowCart(true)
+    setCartItems([...cartItems, item]);
+
+  };
   return (
     <div>
-     <VpnTable/>
+     <VpnTable addToCart={addToCart}/>
+     <BuyModal cartItems={cartItems} setCartItems={setCartItems} showCart={showCart} setShowCart={setShowCart}/>
     </div>
   )
 }
 
-export default index
+export default Index

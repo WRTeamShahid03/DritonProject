@@ -211,3 +211,20 @@ code[class*='language-'] {
   margin-right: 20px;
   margin-top: 16px;
 }
+
+@media only screen and (max-width: 1700px) {
+  #cartModal{
+    right: 24px;
+  }
+}
+@media only screen and (min-width: 470px) and  (max-width: 602px) {
+  #cartModal{
+   width: 400px;
+  }
+}
+@media only screen and (min-width: 320px) and  (max-width: 469px) {
+  #cartModal {
+    width: 292px;
+    right: 10px;
+}
+}

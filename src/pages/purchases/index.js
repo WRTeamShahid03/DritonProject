@@ -15,7 +15,7 @@ import Link from 'next/link'
 // ** Icon Imports
 import Icon from 'src/@core/components/icon'
 
-const index = () => {
+const Index = () => {
     return (
         <>
              <Breadcrum title="Purchase" />
@@ -77,4 +77,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

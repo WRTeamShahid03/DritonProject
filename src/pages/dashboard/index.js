@@ -15,7 +15,7 @@ import ListItemSelected from './ListItemSelected'
 import Link from 'next/link'
 import CrmActivityTimeline from './CrmActivityTimeline'
 
-const index = () => {
+const Index = () => {
   return (
     <ApexChartWrapper>
       <Grid container spacing={6}>
@@ -208,4 +208,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

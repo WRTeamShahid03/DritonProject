@@ -116,7 +116,7 @@ const Food = props => {
                                     <Button variant='contained' color='success' size="small">Buy</Button>
                                 </TableCell>
                                 <TableCell align='left'>
-                                <BuyModal/>
+                                <Button variant='contained' color='success' size="small" onClick={() => props.addToCart(row)}>+</Button>
                                 </TableCell>
                             </TableRow>
                         ))}
