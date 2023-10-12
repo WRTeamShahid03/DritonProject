@@ -20,6 +20,8 @@ import { useAuth } from 'src/hooks/useAuth'
 
 // ** Util Import
 import getHomeRoute from 'src/layouts/components/acl/getHomeRoute'
+import { useSelector } from 'react-redux'
+import { settingsdata } from 'src/store/apps/settings'
 
 const AclGuard = props => {
   // ** Props
@@ -29,6 +31,42 @@ const AclGuard = props => {
   const auth = useAuth()
   const router = useRouter()
 
+  // console.log("auth",auth)
+
+ const sellerData = useSelector(settingsdata)
+
+  let sellerbool = sellerData.seller
+
+  // const sellerRoutes = [
+  //   "/seller/auth",
+  //   "/seller/dashboard",
+  //   "/seller/payouts",
+  //   "/seller/price-limit",
+  //   "/seller/reports",
+  //   "/seller/rules",
+  //   "/seller/settings",
+  //   "/seller/telegram",
+  //   "/seller/tools",
+  //   "/seller/tools-requests",
+  //   "/seller/warnings",
+
+  // ]
+
+  useEffect(() => {
+    const pathname = router.pathname;
+    const sellerPath = pathname.split('/').filter(Boolean)[0];
+    if(sellerPath === "seller"){
+      if(!sellerbool) {
+        console.log(sellerbool)
+            router.push("/seller/auth")
+      }else{
+        router.push("/seller/dashboard")
+      }
+      
+    }
+ 
+  },[router.route])
+
   // ** Vars
   let ability
   useEffect(() => {
@@ -37,6 +75,7 @@ const AclGuard = props => {
       router.replace(homeRoute)
     }
   }, [auth.user, guestGuard, router])
+
 
   // User is logged in, build ability for the user based on his role
   if (auth.user && !ability) {

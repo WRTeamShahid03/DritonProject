@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Card, CardHeader, Grid, IconButton, InputAdornment, Typography } from '@mui/material'
 import CustomTextField from 'src/@core/components/mui/text-field'
 import Icon from 'src/@core/components/icon'
@@ -6,6 +6,8 @@ import { Box } from '@mui/system'
 import Breadcrum from 'src/pages/components/Breadcrum'
 import { useRouter } from 'next/router';
 import { toast } from 'react-hot-toast';
+import { loadSellerData, settingsdata } from 'src/store/apps/settings'
+import { useSelector } from 'react-redux'
 // import IconButton from '@mui/material/IconButton'
 
 // import Icon from 'src/@core/components/icon'
@@ -15,11 +17,17 @@ const Index = () => {
 
     const router = useRouter();
 
+    const sellerPassword = "12345"
+
+    const sellerData = useSelector(settingsdata)
+
     // ** States
     const [values, setValues] = useState({
         password: '',
         showPassword: false
     })
+
+    console.log("values",values)
     const [values2, setValues2] = useState({
         password: '',
         showPassword: false
@@ -57,14 +65,16 @@ const Index = () => {
             router.push('/seller/dashboard');
         }
     };
+    
     const handleSubmit2 = () => {
-        if (values2.password === '' || values2.password === undefined) {
+        if(sellerPassword == values2.password){
+            loadSellerData(true)
+            router.push('/seller/dashboard');
+        }else {
             toast.error('Enter the password correctly')
         }
-        else {
-            router.push('/seller/dashboard');
-        }
     };
+
     return (
         <>
             <Breadcrum title="Seller Authentication" />

@@ -20,6 +20,7 @@ import Icon from 'src/@core/components/icon'
 
 // ** Context
 import { useAuth } from 'src/hooks/useAuth'
+import { loadSellerData } from 'src/store/apps/settings'
 
 // ** Styled Components
 const BadgeContentSpan = styled('span')(({ theme }) => ({
@@ -77,6 +78,7 @@ const UserDropdown = props => {
   }
 
   const handleLogout = () => {
+    loadSellerData(false)
     logout()
     handleDropdownClose()
   }

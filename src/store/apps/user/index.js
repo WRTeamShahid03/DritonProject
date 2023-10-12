@@ -38,7 +38,8 @@ export const appUsersSlice = createSlice({
     data: [],
     total: 1,
     params: {},
-    allData: []
+    allData: [],
+    seller:false,
   },
   reducers: {},
   extraReducers: builder => {
@@ -47,6 +48,7 @@ export const appUsersSlice = createSlice({
       state.total = action.payload.total
       state.params = action.payload.params
       state.allData = action.payload.allData
+      state.seller = action.payload.seller
     })
   }
 })

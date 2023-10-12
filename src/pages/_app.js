@@ -99,6 +99,7 @@ const App = props => {
   const guestGuard = Component.guestGuard ?? false
   const aclAbilities = Component.acl ?? defaultACLObj
 
+
   return (
     <>
     <Provider store={store}>
@@ -120,8 +121,8 @@ const App = props => {
                 return (
                   <ThemeComponent settings={settings}>
                     <Guard authGuard={authGuard} guestGuard={guestGuard}>
-                      <AclGuard aclAbilities={aclAbilities} guestGuard={guestGuard} authGuard={authGuard}>
-                        {getLayout(<Component {...pageProps} />)}
+                      <AclGuard aclAbilities={aclAbilities} guestGuard={guestGuard} authGuard={authGuard} >
+                          {getLayout(<Component {...pageProps} />)}
                       </AclGuard>
                     </Guard>
                     <ReactHotToast>
