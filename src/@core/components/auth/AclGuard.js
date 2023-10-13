@@ -22,6 +22,7 @@ import { useAuth } from 'src/hooks/useAuth'
 import getHomeRoute from 'src/layouts/components/acl/getHomeRoute'
 import { useSelector } from 'react-redux'
 import { settingsdata } from 'src/store/apps/settings'
+import toast from 'react-hot-toast'
 
 const AclGuard = props => {
   // ** Props
@@ -37,35 +38,36 @@ const AclGuard = props => {
 
   let sellerbool = sellerData.seller
 
-  // const sellerRoutes = [
-  //   "/seller/auth",
-  //   "/seller/dashboard",
-  //   "/seller/payouts",
-  //   "/seller/price-limit",
-  //   "/seller/reports",
-  //   "/seller/rules",
-  //   "/seller/settings",
-  //   "/seller/telegram",
-  //   "/seller/tools",
-  //   "/seller/tools-requests",
-  //   "/seller/warnings",
+  const sellerRoutes = [
+    "/seller/auth",
+    "/seller/dashboard",
+    "/seller/payouts",
+    "/seller/price-limit",
+    "/seller/reports",
+    "/seller/rules",
+    "/seller/settings",
+    "/seller/telegram",
+    "/seller/tools",
+    "/seller/tools-requests",
+    "/seller/warnings",
+  ]
 
-  // ]
+  const requiresAuth = sellerRoutes.includes(router.pathname);
 
-  useEffect(() => {
-    const pathname = router.pathname;
-    const sellerPath = pathname.split('/').filter(Boolean)[0];
-    if(sellerPath === "seller"){
-      if(!sellerbool) {
-        console.log(sellerbool)
-            router.push("/seller/auth")
-      }else{
-        router.push("/seller/dashboard")
-      }
-      
+  const authCheck = () => {
+    if (requiresAuth && !sellerbool) {
+      router.push('/seller/auth');
+      toast.error('Please login first');
     }
- 
-  },[router.route])
+  };
+
+  const pathname = router.pathname;
+  useEffect(() => {
+    authCheck();
+  }, [requiresAuth,sellerData,pathname]);
+
+
+    
 
   // ** Vars
   let ability
